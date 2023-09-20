@@ -1,12 +1,12 @@
 export const MenuItems = [
   {
-    title: 'Marketing',
-    path: '/marketing',
+    title: '.Net Api & MSSql',
+    path: '/netapi',
     cName: 'dropdown-link'
   },
   {
-    title: 'Consulting',
-    path: '/consulting',
+    title: 'Front-end z Reactem',
+    path: '/fronttech',
     cName: 'dropdown-link'
   },
   {

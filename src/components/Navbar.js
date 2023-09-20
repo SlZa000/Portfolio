@@ -40,7 +40,7 @@ function Navbar() {
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
             <Link to='/' className='nav-links' onClick={closeMobileMenu}>
-              Home
+              Start
             </Link>
           </li>
           <li
@@ -49,11 +49,11 @@ function Navbar() {
             onMouseLeave={onMouseLeave}
           >
             <Link
-              to='/services'
+              to='/Projects'
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Services <i className='fas fa-caret-down' />
+              Projects <i className='fas fa-caret-down' />
             </Link>
             {dropdown && <Dropdown />}
           </li>
@@ -72,7 +72,7 @@ function Navbar() {
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Contact Us
+              Kontakt
             </Link>
           </li>
           <li>

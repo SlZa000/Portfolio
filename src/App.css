@@ -6,12 +6,12 @@
 }
 
 .home,
-.services,
+.Projects,
 .products,
 .contact-us,
 .sign-up,
-.marketing,
-.consulting {
+.netapi,
+.fronttech {
   height: 90vh;
   align-items: center;
   justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 
-.services {
+.Projects {
   background-image: url('./images/img-2.jpg');
   background-position: center;
   background-size: cover;
@@ -63,7 +63,7 @@
   font-size: 100px;
 }
 
-.marketing {
+.netapi {
   background-image: url('./images/img-6.jpg');
   background-position: center;
   background-size: cover;
@@ -72,7 +72,7 @@
   font-size: 100px;
 }
 
-.consulting {
+.fronttech {
   background-image: url('./images/img-5.jpg');
   background-position: bottom;
   background-size: cover;

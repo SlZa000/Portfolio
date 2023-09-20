@@ -28,7 +28,7 @@ export default function Home() {
           <p>Opis widoczny</p>
           {isExpanded1 && <p>Opis rozwinięty</p>}
           <button className="toggle-button" onClick={handleToggle1}>Rozwiń/Zwiń opis</button>
-          <Link to="/marketing"><button className="see-more-button">Przejdź do Marketing</button></Link>
+          <Link to="/netapi"><button className="see-more-button">Przejdź do netapi</button></Link>
         </div>
         <div className="article">
           <h3>Projekt2</h3>
@@ -36,7 +36,7 @@ export default function Home() {
           <p>Opis widoczny</p>
           {isExpanded2 && <p>Opis rozwinięty</p>}
           <button className="toggle-button" onClick={handleToggle2}>Rozwiń/Zwiń opis</button>
-          <Link to="/marketing"><button className="see-more-button">Przejdź do Marketing</button></Link>
+          <Link to="/netapi"><button className="see-more-button">Przejdź do netapi</button></Link>
         </div>
       </div>
     </div>
