@@ -18,34 +18,39 @@
 
 
 .article .see-more-button, .article .toggle-button {
-    background-color: #1888ff; /* Kolor tła */
-    color: rgb(255, 255, 255); /* Kolor tekstu */
-    border: none; /* Brak obramowania */
-    cursor: pointer; /* Kursor wskazujący */
-    padding: 5px 10px; /* Wypełnienie */
-    text-align: center; /* Wyśrodkowanie tekstu */
-    text-decoration: none; /* Brak dekoracji tekstu */
-    display: inline-block;
-    font-size: 16px;
-    transition-duration: 0.4s; /* Czas trwania animacji */
+  background-color: #1888ff; /* Kolor tła */
+  color: rgb(255, 255, 255); /* Kolor tekstu */
+  border: 3px solid transparent; /* Dodane - transparentne obramowanie */
+  cursor: pointer; /* Kursor wskazujący */
+  padding: 5px 10px; /* Wypełnienie */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  text-decoration: none; /* Brak dekoracji tekstu */
+  display: inline-block;
+  font-size: 16px;
+  transition: background-color 0.4s, border 0.4s; /* Czas trwania animacji */
+  border-radius: 10px; /* Dodane - zaokrąglone krawędzie */
 }
 
 .article .see-more-button:hover, .article .toggle-button:hover {
-    background-color: rgb(0, 0, 0); /* Kolor tła po najechaniu */
-    color: rgb(255, 255, 255); /* Kolor tekstu po najechaniu */
+  background-color: rgb(0, 0, 0); /* Kolor tła po najechaniu */
+  color: rgb(255, 255, 255); /* Kolor tekstu po najechaniu */
+  border: 3px solid #1888ff; /* Dodane - obramowanie podczas hover */
 }
 
 .article .see-more-button {
-    position: absolute; 
-    bottom: -5%;
-    right: 0;
-    margin: 5%;
+  position: absolute; 
+  bottom: -5%;
+  right: 0;
+  margin: 5%;
 }
 
 .article .toggle-button {
-    display: block;
-    margin: auto;
+  display: block;
+  margin: auto;
 }
+
+
+
 
 
   
