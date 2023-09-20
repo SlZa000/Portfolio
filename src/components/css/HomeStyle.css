@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Dodane */
+  }
+  
+  .article {
+    width: 40%;
+    margin: 5%;
+    padding: 5%;
+    position: relative; 
+    box-sizing: border-box;
+    background-color: white; /* Dodane */
+    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.5); /* Dodane i zmienione na inset */
+    align-self: flex-start; /* Dodane */
+}
+
+
+
+.article .see-more-button, .article .toggle-button {
+    background-color: #1888ff; /* Kolor tła */
+    color: rgb(255, 255, 255); /* Kolor tekstu */
+    border: none; /* Brak obramowania */
+    cursor: pointer; /* Kursor wskazujący */
+    padding: 5px 10px; /* Wypełnienie */
+    text-align: center; /* Wyśrodkowanie tekstu */
+    text-decoration: none; /* Brak dekoracji tekstu */
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s; /* Czas trwania animacji */
+}
+
+.article .see-more-button:hover, .article .toggle-button:hover {
+    background-color: rgb(0, 0, 0); /* Kolor tła po najechaniu */
+    color: rgb(255, 255, 255); /* Kolor tekstu po najechaniu */
+}
+
+.article .see-more-button {
+    position: absolute; 
+    bottom: -5%;
+    right: 0;
+    margin: 5%;
+}
+
+.article .toggle-button {
+    display: block;
+    margin: auto;
+}
+
+
+  
+  .container h2 {
+    color: white;
+    width: 100%;
+    text-align: center;
+}
+
+  .About-me-short h1{
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  @media screen and (max-width: 600px) {
+    .article {
+      flex: 1 0 auto; /* Zmienione na auto */
+      margin: 10%; /* Zmienione na 10% */
+      max-width: 80%; /* Dodane */
+    }
+  }
+  
