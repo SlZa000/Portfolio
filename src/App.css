@@ -7,7 +7,7 @@
 
 .home,
 .Projects,
-.products,
+.aboutme,
 .contact-us,
 .sign-up,
 .netapi,
@@ -36,7 +36,7 @@
   font-size: 100px;
 }
 
-.products {
+.aboutme {
   background-image: url('./images/img-3.jpg');
   background-position: center;
   background-size: fill;

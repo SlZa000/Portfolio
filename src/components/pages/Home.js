@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../App.css';
 import '../css/HomeStyle.css';
 import { Link } from 'react-router-dom';
+import AboutMe from './aboutme';
 
 export default function Home() {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="About-me-short">
-        <h1>O Mnie</h1>
+        <h1>Tu coś co przyciągnie wzrok</h1>
       </div>
       <div className="container">
         <h2>Moje Projekty</h2>
@@ -39,6 +40,7 @@ export default function Home() {
           <Link to="/netapi"><button className="see-more-button">Przejdź do netapi</button></Link>
         </div>
       </div>
+      <AboutMe />
     </div>
   );
 }

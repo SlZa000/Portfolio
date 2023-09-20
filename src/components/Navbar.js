@@ -3,6 +3,7 @@ import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
+import { HashLink as Links } from 'react-router-hash-link';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -43,6 +44,11 @@ function Navbar() {
               Start
             </Link>
           </li>
+          <li className='nav-item'>
+            <Links smooth to="/#aboutme" className='nav-links' onClick={closeMobileMenu}>
+              O mnie
+            </Links>
+          </li>
           <li
             className='nav-item'
             onMouseEnter={onMouseEnter}
@@ -56,15 +62,6 @@ function Navbar() {
               Projects <i className='fas fa-caret-down' />
             </Link>
             {dropdown && <Dropdown />}
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/products'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Products
-            </Link>
           </li>
           <li className='nav-item'>
             <Link

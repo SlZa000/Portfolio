@@ -55,8 +55,9 @@
 
   
   .container h2 {
-    color: white;
+    color: rgb(78, 78, 78);
     width: 100%;
+    font-size: 5em;
     text-align: center;
 }
 

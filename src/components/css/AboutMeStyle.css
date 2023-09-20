@@ -1,0 +1,15 @@
+.aboutme {
+    padding: 50px;
+    background-color: #f9f9f9;
+  }
+  
+  .aboutme h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .aboutme p {
+    font-size: 1em;
+    color: #666;
+  }
+  
