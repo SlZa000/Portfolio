@@ -13,14 +13,14 @@ import fronttech from './components/pages/fronttech';
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/Projects' component={Projects} />
-        <Route path='/aboutme' component={aboutme} />
-        <Route path='/sign-up' component={SignUp} />
-        <Route path='/netapi' component={netapi} />
-        <Route path='/fronttech' component={fronttech} />
+        <Navbar />
+          <Switch>
+            <Route path='/' exact component={Home} />
+            <Route path='/Projects' component={Projects} />
+            <Route path='/aboutme' component={aboutme} />
+            <Route path='/sign-up' component={SignUp} />
+            <Route path='/netapi' component={netapi} />
+            <Route path='/fronttech' component={fronttech} />
       </Switch>
       <ContactUs />
     </Router>
