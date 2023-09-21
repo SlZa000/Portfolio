@@ -1,3 +1,5 @@
+/* Navbar.css */
+
 .navbar {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   height: 80px;
@@ -5,16 +7,15 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: fixed; /* Dodane */
-  width: 100%; /* Dodane */
-  top: 0; /* Dodane */
-  z-index: 100; /* Dodane - aby upewnić się, że navbar jest zawsze na wierzchu */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
-
 .navbar-logo {
-  display: flex; /* Dodane */
-  align-items: center; /* Dodane */
+  display: flex;
+  align-items: center;
   color: #fff;
   justify-self: start;
   margin-left: 20px;
@@ -24,7 +25,6 @@
   white-space: nowrap;
 }
 
-
 .fa-firstdraft {
   margin-left: 0.5rem;
   font-size: 1.6rem;
@@ -32,7 +32,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(4, auto); /* Zmieniono na 4 kolumny */
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -49,9 +49,13 @@
 }
 
 .nav-links {
+  flex: 1; /* 20% szerokości */
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
+  display: flex; /* Dodaj */
+  justify-content: center; /* Dodaj */
+  align-items: center; /* Dodaj */
 }
 
 .nav-links:hover {
@@ -63,20 +67,10 @@
 .fa-bars {
   color: #fff;
 }
-
-.nav-links-mobile {
+.nav-button {
   display: none;
 }
-
-.menu-icon {
-  display: none;
-}
-
 @media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
-
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -89,6 +83,13 @@
     transition: all 0.5s ease;
   }
 
+  .nav-button {
+    flex: 1; /* 20% szerokości */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   .nav-menu.active {
     background: #242222;
     left: 0;
@@ -130,27 +131,27 @@
     color: #fff;
     font-size: 2rem;
   }
+  .nav-links-container{
+    width: 80%;
+  }
 
   .nav-links-mobile {
     display: block;
     text-align: center;
     padding: 1.5rem;
-    margin: 2rem auto;
     border-radius: 4px;
-    width: 80%;
     background: #1888ff;
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
+    display: flex; /* Dodaj */
+    justify-content: center; /* Dodaj */
+    align-items: center; /* Dodaj */
   }
 
   .nav-links-mobile:hover {
     background: #fff;
     color: #1888ff;
     transition: 250ms;
-  }
-
-  button {
-    display: none;
   }
 }

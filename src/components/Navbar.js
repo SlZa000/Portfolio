@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from './Button';
-import { Link, useHistory } from 'react-router-dom'; // Dodaj useHistory
+import { Link, useHistory } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 import { HashLink as Links } from 'react-router-hash-link';
@@ -9,7 +9,7 @@ import { Link as ScrollLink } from 'react-scroll';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
-  const history = useHistory(); // Inicjalizuj useHistory
+  const history = useHistory();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -30,7 +30,6 @@ function Navbar() {
     }
   };
 
-  // Funkcja do przewijania strony do góry
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -38,7 +37,7 @@ function Navbar() {
   return (
     <>
       <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={scrollToTop}> {/* Dodaj onClick do przewijania do góry */}
+        <Link to='/' className='navbar-logo' onClick={scrollToTop}>
           Sławomir Zając
           <i className='fab fa-firstdraft' />
         </Link>
@@ -47,28 +46,44 @@ function Navbar() {
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={() => { closeMobileMenu(); scrollToTop(); }}> {/* Dodaj onClick do przewijania do góry */}
+            <Link to='/' className={`nav-links ${click ? 'nav-links-mobile' : ''}`} onClick={() => { closeMobileMenu(); scrollToTop(); }}>
               Start
             </Link>
           </li>
           <li className='nav-item'>
-            <Links smooth to="/#aboutme" className='nav-links' onClick={closeMobileMenu}>
+            <Links smooth to="/#aboutme" className={`nav-links ${click ? 'nav-links-mobile' : ''}`} onClick={closeMobileMenu}>
               O mnie
             </Links>
           </li>
           <li
-            className='nav-item'
+            className={`nav-item ${click ? 'nav-item-mobile' : ''}`}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <Link
-              to='/Projects'
-              className='nav-links'
-              onClick={() => { closeMobileMenu(); scrollToTop(); }} 
-            >
-              Projects <i className='fas fa-caret-down' />
-            </Link>
-            {dropdown && <Dropdown />}
+            <div className='nav-links-container'>
+              <Link
+                to='/Projects'
+                className={`nav-links ${click ? 'nav-links-mobile' : ''}`}
+                onClick={() => { closeMobileMenu(); scrollToTop(); }}
+              >
+                Projects <i className='fas fa-caret-down' />
+              </Link>
+              {dropdown && <Dropdown />}
+            </div>
+            {click && (
+              <div className={`nav-button ${click ? '' : 'nav-button-mobile'}`}>
+                <Button
+                buttonStyle='btn--outline'
+                buttonSize='btn--mobile'
+                to='/Projects'
+                onClick={closeMobileMenu}
+                className='btn--desktop-hidden' // Dodaj tę klasę
+              >
+                Projects
+              </Button>
+
+              </div>
+            )}
           </li>
           <li className='nav-item'>
             <ScrollLink
@@ -76,7 +91,7 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
-              className='nav-links'
+              className={`nav-links ${click ? 'nav-links-mobile' : ''}`}
               onClick={closeMobileMenu}
             >
               Kontakt

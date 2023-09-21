@@ -1,17 +1,74 @@
+.contact {
+  padding: 50px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-size: 20px;
+}
 
-  .contact {
-    padding: 50px;
-    background-color: #f9f9f9;
-  }
-  
-  .contact h1 {
-    font-size: 2em;
-    color: #ffffff;
-  }
-  
-  .contact p {
-    font-size: 1em;
-    color: #b9b9b9;
-  }
-  
-  
+.contact h1 {
+  font-size: 50px;
+  color: #ffffff;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Użyj flexboxa dla .form-group-half, aby układały się obok siebie */
+.contact-form .form-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Ustaw szerokość na 50% dla .form-group-half */
+.contact-form .form-group .form-group-half {
+  width: 46%;
+  margin: 0 2% 0 2%;
+}
+
+.contact-form label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Aktualizacja stylu dla pól tekstowych */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #000; /* Zmieniony kolor obramowania na czarny i grubość na 2px */
+  border-radius: 5px; /* Zaokrąglone krawędzie */
+}
+
+.contact-form .form-group textarea {
+  height: auto;
+}
+
+.contact-form button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  background-color: #0056b3;
+}
