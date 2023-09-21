@@ -1,15 +1,17 @@
-.aboutme {
+
+  .contact {
     padding: 50px;
     background-color: #f9f9f9;
   }
   
-  .aboutme h1 {
+  .contact h1 {
     font-size: 2em;
     color: #ffffff;
   }
   
-  .aboutme p {
+  .contact p {
     font-size: 1em;
-    color: #ffffff;
+    color: #b9b9b9;
   }
+  
   

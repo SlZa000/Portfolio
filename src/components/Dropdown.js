@@ -8,6 +8,11 @@ function Dropdown() {
 
   const handleClick = () => setClick(!click);
 
+  // Funkcja do przewijania strony do góry
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <ul
@@ -20,7 +25,10 @@ function Dropdown() {
               <Link
                 className={item.cName}
                 to={item.path}
-                onClick={() => setClick(false)}
+                onClick={() => {
+                  setClick(false);
+                  scrollToTop(); // Przewiń do góry po zmianie podstrony
+                }}
               >
                 {item.title}
               </Link>

@@ -49,10 +49,6 @@
   margin: auto;
 }
 
-
-
-
-
   
   .container h2 {
     color: rgb(78, 78, 78);
@@ -66,6 +62,8 @@
     color: white;
     text-align: center;
   }
+
+  
   @media screen and (max-width: 600px) {
     .article {
       flex: 1 0 auto; /* Zmienione na auto */
