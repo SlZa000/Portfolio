@@ -83,7 +83,7 @@ function Navbar() {
           >
             <Link
               to='/projects'
-              className={`nav-links ${click ? 'nav-links-mobile' : ''}`}
+              className={`nav-links ${click ? 'drop-nav-links-mobile nav-links-mobile' : ''}`}
               onClick={() => { handleDesktopClick(); closeMobileMenu(); scrollToTop(); }}
             >
               Projects   

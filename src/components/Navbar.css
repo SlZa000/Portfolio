@@ -74,6 +74,10 @@
     position: relative;
   }
   
+  .drop-nav-links-mobile {
+    width: 73.5% !important;
+  }
+
   .nav-item:first-child {
     margin-top: 2em;
   }

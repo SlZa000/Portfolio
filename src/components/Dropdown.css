@@ -32,12 +32,8 @@
 @media screen and (max-width: 960px) {
   .fa-caret-down {
     height: 4.1em; /* Wysokość 100% */
-    width: 10%; /* Szerokość 20% */
-    margin: 0 2% 0 2%;
+    width: 6.5%; /* Szerokość 20% */
     background-color: black;
-    position: absolute;
-    right: 9.5%;
-    top:11.4em;
     color:#fff;
     padding-bottom: 1em;
     padding-top: 1em;
