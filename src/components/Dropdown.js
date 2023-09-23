@@ -1,14 +1,14 @@
+// Dropdown.js
 import React, { useState } from 'react';
 import { MenuItems } from './MenuItems';
 import './Dropdown.css';
 import { Link } from 'react-router-dom';
 
-function Dropdown() {
+function Dropdown({ closeMobileMenu }) {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
 
-  // Funkcja do przewijania strony do góry
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -27,6 +27,7 @@ function Dropdown() {
                 to={item.path}
                 onClick={() => {
                   setClick(false);
+                  closeMobileMenu(); // Wywołujemy funkcję z komponentu Navbar
                   scrollToTop(); // Przewiń do góry po zmianie podstrony
                 }}
               >

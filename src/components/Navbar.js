@@ -1,3 +1,4 @@
+// Navbar.js
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Navbar.css';
@@ -93,9 +94,9 @@ function Navbar() {
             {window.innerWidth < 960 && (
                 <i className='fas fa-caret-down' onClick={handleMobileClick} />
               )}
-            {window.innerWidth >= 960 && (dropdown || (click && mobileDropdown)) && <Dropdown />}
+            {window.innerWidth >= 960 && (dropdown || (click && mobileDropdown)) && <Dropdown closeMobileMenu={closeMobileMenu} />}
           </li>
-          {window.innerWidth < 960 && (dropdown || (click && mobileDropdown)) && <Dropdown />}
+          {window.innerWidth < 960 && (dropdown || (click && mobileDropdown)) && <Dropdown closeMobileMenu={closeMobileMenu} />}
           <li className='nav-item'>
             <ScrollLink
               to='contact'
