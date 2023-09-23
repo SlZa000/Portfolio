@@ -32,7 +32,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(4, auto); /* Zmieniono na 4 kolumny */
+  grid-template-columns: repeat(4, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -49,13 +49,12 @@
 }
 
 .nav-links {
-  flex: 1; /* 20% szerokości */
   color: white;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  display: flex; /* Dodaj */
-  justify-content: center; /* Dodaj */
-  align-items: center; /* Dodaj */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav-links:hover {
@@ -67,15 +66,16 @@
 .fa-bars {
   color: #fff;
 }
+
 .nav-button {
   display: none;
 }
+
 @media screen and (max-width: 960px) {
   .nav-menu {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
     position: absolute;
     top: 80px;
     left: -100%;
@@ -84,7 +84,7 @@
   }
 
   .nav-button {
-    flex: 1; /* 20% szerokości */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,7 +131,8 @@
     color: #fff;
     font-size: 2rem;
   }
-  .nav-links-container{
+
+  .nav-links-container {
     width: 80%;
   }
 
@@ -144,9 +145,9 @@
     text-decoration: none;
     color: #fff;
     font-size: 1.5rem;
-    display: flex; /* Dodaj */
-    justify-content: center; /* Dodaj */
-    align-items: center; /* Dodaj */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .nav-links-mobile:hover {
