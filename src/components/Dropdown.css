@@ -31,8 +31,16 @@
 
 @media screen and (max-width: 960px) {
   .fa-caret-down {
-    margin:0 2% 0 2%;
+    height: 4.1em; /* Wysokość 100% */
+    width: 10%; /* Szerokość 20% */
+    margin: 0 2% 0 2%;
     background-color: black;
+    position: absolute;
+    right: 9.5%;
+    top:11.4em;
+    color:#fff;
+    padding-bottom: 1em;
+    padding-top: 1em;
   }
   .dropdown-menu {
     position: initial; /* Ustaw pozycję absolutną */
@@ -41,6 +49,7 @@
     background: red; /* Kolor tła dropdown */
     list-style: none;
     text-align: start;
+    margin-left: 3.75em;
     z-index: 1;
   }
 

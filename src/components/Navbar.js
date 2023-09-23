@@ -80,16 +80,22 @@ function Navbar() {
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <div
+            <Link
+              to='/projects'
               className={`nav-links ${click ? 'nav-links-mobile' : ''}`}
-              onClick={handleDesktopClick}
+              onClick={() => { handleDesktopClick(); closeMobileMenu(); scrollToTop(); }}
             >
-              Projects 
-              <i className='fas fa-caret-down' onClick={handleMobileClick} />
-            </div>
-            
-            {(dropdown || (click && mobileDropdown)) && <Dropdown />}
+              Projects   
+              {window.innerWidth >= 960 && (
+                <i className='fas fa-caret-down' onClick={handleMobileClick} />
+              )}
+            </Link>
+            {window.innerWidth < 960 && (
+                <i className='fas fa-caret-down' onClick={handleMobileClick} />
+              )}
+            {window.innerWidth >= 960 && (dropdown || (click && mobileDropdown)) && <Dropdown />}
           </li>
+          {window.innerWidth < 960 && (dropdown || (click && mobileDropdown)) && <Dropdown />}
           <li className='nav-item'>
             <ScrollLink
               to='contact'
