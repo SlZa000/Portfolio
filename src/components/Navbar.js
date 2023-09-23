@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { Button } from './Button';
+import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
@@ -9,29 +8,50 @@ import { Link as ScrollLink } from 'react-scroll';
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [mobileDropdown, setMobileDropdown] = useState(false);
   const history = useHistory();
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
+    if (window.innerWidth >= 960) {
       setDropdown(true);
     }
   };
 
   const onMouseLeave = () => {
-    if (window.innerWidth < 960) {
-      setDropdown(false);
-    } else {
+    if (window.innerWidth >= 960) {
       setDropdown(false);
     }
   };
 
+  const toggleMobileDropdown = () => {
+    setMobileDropdown(!mobileDropdown);
+  };
+
+  useEffect(() => {
+    // Zamykanie Dropdown po zmianie routingu
+    history.listen(() => {
+      setDropdown(false);
+      setMobileDropdown(false);
+    });
+  }, [history]);
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleDesktopClick = () => {
+    if (window.innerWidth >= 960) {
+      toggleMobileDropdown();
+    }
+  };
+
+  const handleMobileClick = () => {
+    if (window.innerWidth < 960) {
+      toggleMobileDropdown();
+    }
   };
 
   return (
@@ -56,34 +76,19 @@ function Navbar() {
             </Links>
           </li>
           <li
-            className={`nav-item ${click ? 'nav-item-mobile' : ''}`}
+            className='nav-item'
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
           >
-            <div className='nav-links-container'>
-              <Link
-                to='/Projects'
-                className={`nav-links ${click ? 'nav-links-mobile' : ''}`}
-                onClick={() => { closeMobileMenu(); scrollToTop(); }}
-              >
-                Projects <i className='fas fa-caret-down' />
-              </Link>
-              {dropdown && <Dropdown />}
+            <div
+              className={`nav-links ${click ? 'nav-links-mobile' : ''}`}
+              onClick={handleDesktopClick}
+            >
+              Projects 
+              <i className='fas fa-caret-down' onClick={handleMobileClick} />
             </div>
-            {click && (
-              <div className={`nav-button ${click ? '' : 'nav-button-mobile'}`}>
-                <Button
-                buttonStyle='btn--outline'
-                buttonSize='btn--mobile'
-                to='/Projects'
-                onClick={closeMobileMenu}
-                className='btn--desktop-hidden' // Dodaj tę klasę
-              >
-                Projects
-              </Button>
-
-              </div>
-            )}
+            
+            {(dropdown || (click && mobileDropdown)) && <Dropdown />}
           </li>
           <li className='nav-item'>
             <ScrollLink
