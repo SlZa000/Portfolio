@@ -33,25 +33,12 @@
 }
 
 .aboutme {
-  background-image: url('./images/img-3.jpg');
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1033%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(140%2c 135%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M 0%2c249 C 144%2c212.2 432%2c59.2 720%2c65 C 1008%2c70.8 1296%2c235.4 1440%2c278L1440 560L0 560z' fill='%23184a7e'%3e%3c/path%3e%3cpath d='M 0%2c405 C 96%2c416.8 288%2c480.2 480%2c464 C 672%2c447.8 768%2c310.8 960%2c324 C 1152%2c337.2 1344%2c488.8 1440%2c530L1440 560L0 560z' fill='%232264ab'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1033'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
   background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 2em;
 }
-
 .contact {
   background-image: url('./images/img-4.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
-}
-
-.sign-up {
-  background-image: url('./images/img-7.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

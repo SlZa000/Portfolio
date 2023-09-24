@@ -1,0 +1,59 @@
+.slider-box{
+    background-color: #717171;
+    margin-bottom: 2em;
+}
+.slider {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Dodane */
+}
+  
+.slide {
+    opacity: 0;
+    transition-duration: 1s ease;
+    position: relative; /* Zmienione z absolute na relative */
+    width: 100%; /* Dodane */
+    height: 10em; /* Dodane */
+}
+  
+.slide.active {
+    opacity: 1;
+    transition-duration: 1s;
+}
+  
+.image {
+    height:35em;
+}
+  
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+}
+  
+.left-arrow {
+    left: 32px;
+}
+  
+.right-arrow {
+    right: 32px;
+}
+  
+.dots {
+    position: absolute;
+    bottom: 25px;
+}
+  
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0.5em;
+}
+  
+.active-dot {
+     background-color: #717171;
+}
