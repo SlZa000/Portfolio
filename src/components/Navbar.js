@@ -5,6 +5,7 @@ import './Navbar.css';
 import Dropdown from './Dropdown';
 import { HashLink as Links } from 'react-router-hash-link';
 import { Link as ScrollLink } from 'react-scroll';
+import logo123 from '../images/logo123.png';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -60,7 +61,7 @@ function Navbar() {
       <nav className='navbar'>
         <Link to='/' className='navbar-logo' onClick={scrollToTop}>
           Sławomir Zając
-          <i className='fab fa-firstdraft' />
+          <img src={logo123} alt="logo" />
         </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
@@ -86,7 +87,7 @@ function Navbar() {
               className={`nav-links ${click ? 'drop-nav-links-mobile nav-links-mobile' : ''}`}
               onClick={() => { handleDesktopClick(); closeMobileMenu(); scrollToTop(); }}
             >
-              Projects   
+              Projekty   
               {window.innerWidth >= 960 && (
                 <i className='fas fa-caret-down' onClick={handleMobileClick} />
               )}

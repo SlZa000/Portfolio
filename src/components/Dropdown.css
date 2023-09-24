@@ -35,8 +35,9 @@
     width: 6.5%; /* Szerokość 20% */
     background-color: black;
     color:#fff;
-    padding-bottom: 1em;
-    padding-top: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .dropdown-menu {
     position: initial; /* Ustaw pozycję absolutną */
