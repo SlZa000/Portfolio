@@ -9,6 +9,9 @@ import Slider from '../slider'; // Zaimportuj komponent Slider
 import image1 from '../../images/img-1.jpg';
 import image2 from '../../images/img-2.jpg';
 import image3 from '../../images/img-3.jpg';
+import image4 from '../../images/img-4.jpg';
+import image5 from '../../images/img-5.jpg';
+import image6 from '../../images/img-6.jpg';
 
 
 
@@ -60,7 +63,7 @@ export default function Home() {
 
   // Przykładowe obrazy dla sliderów
   const imagesProject2 = [image1, image2, image3];
-  const imagesProject3 = ['image4.jpg', 'image5.jpg', 'image6.jpg'];
+  const imagesProject3 = [image4, image5, image6];
 
   return (
     <div>
@@ -83,7 +86,7 @@ export default function Home() {
           <h2>Moje Projekty</h2>
           <div className="article">
             <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
-            <img src="" alt="Upsss" />
+            <Slider images={imagesProject2} />
             <p>Opis widoczny</p>
             <animated.div style={animation1} className={`description ${isExpanded1 ? 'expanded' : ''}`}>
               {isExpanded1 && <p>What is Lorem Ipsum?</p>}
@@ -131,7 +134,7 @@ export default function Home() {
           {/* Projekt 4 */}
           <div className="article">
             <h3>Projekt4</h3>
-            <img src="" alt="Upsss" />
+            <Slider images={imagesProject2} />
             <p>Opis widoczny</p>
             <animated.div style={animation4} className={`description ${isExpanded4 ? 'expanded' : ''}`}>
               {isExpanded4 && <p>Opis rozwinięty</p>}

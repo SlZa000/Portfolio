@@ -13,6 +13,9 @@ const PhotoSlider = ({ images }) => {
     slidesToScroll: 1,
     swipeToSlide: true,
     centerMode: true,
+    centerPadding: '0',
+    nextArrow: <SamplePrevArrow />, // Zamienione
+    prevArrow: <SampleNextArrow />, // Zamienione
   };
 
   return (
@@ -27,5 +30,27 @@ const PhotoSlider = ({ images }) => {
     </div>
   );
 };
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "white" }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "white" }}
+      onClick={onClick}
+    />
+  );
+}
 
 export default PhotoSlider;
