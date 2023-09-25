@@ -1,0 +1,40 @@
+/* Projects.css */
+
+.Projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .ArticleSection {
+    margin: 40px 0;
+  }
+  
+  .ArticleSection h2 {
+    font-size: 24px;
+  }
+  
+  .ArticleSection p {
+    font-size: 16px;
+  }
+  
+  .ArticleSection img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .NavigationButtons {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .NavigationButtons button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

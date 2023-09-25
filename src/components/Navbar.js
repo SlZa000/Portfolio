@@ -59,10 +59,12 @@ function Navbar() {
   return (
     <>
       <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={scrollToTop}>
-          Sławomir Zając
+      <Link to='/' className='navbar-logo' onClick={scrollToTop}>
+        <div className="logo-container">
           <img src={logo123} alt="logo" />
-        </Link>
+          <span className="navbar-logo-text">Sławomir Zając</span>
+        </div>
+      </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>

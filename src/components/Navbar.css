@@ -13,22 +13,30 @@
   z-index: 100;
 }
 
-.navbar-logo img {
-  width: 55px;
-  height: 30px;
-  margin-left: 20px;
+.logo-container {
+  display: flex;
+  align-items: center;
 }
-.navbar-logo {
+
+.logo-container img {
+  max-width: 55px;
+  height: auto;
+  margin-right: 10px; /* Dodane odstępy między logo a tekstem */
+}
+
+.navbar-logo span {
   color: #fff;
-  justify-self: start;
-  margin-left: 20px;
   cursor: pointer;
-  text-decoration: none;
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  white-space: nowrap; /* Zapobiega zawijaniu tekstu */
+  overflow: hidden; /* Zapobiega ukrywaniu tekstu, gdy jest za długi */
+  max-width: 100%;
+  text-decoration: none !important; 
 }
+
 
 .fa-firstdraft {
   margin-left: 0.5rem;
@@ -78,7 +86,7 @@
 }
 
 @media screen and (max-width: 960px) {
-  .NavbarItems {
+  .nav-links-mobile {
     position: relative;
   }
   

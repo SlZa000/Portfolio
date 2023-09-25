@@ -1,6 +1,7 @@
 .aboutme {
     padding: 50px;
-    background-color: #f9f9f9;
+    position: relative; /* Add this to position content elements */
+    z-index: 2; /* Add this to give content a higher z-index */
   }
   
   .aboutme h1 {
