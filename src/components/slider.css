@@ -34,8 +34,11 @@
 .slick-prev:before {
     content: '';
 }
+.slick-dots {
+    transform: rotate(180deg);
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .slick-next,
   .slick-prev {
       display: none !important;
@@ -53,21 +56,16 @@
     max-height: 100%; 
     object-fit: contain; 
 }
-.left-arrow,
-.right-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2em;
-}
+.slick-next {
+    right: auto;
+    left: -25px;
+  }
   
-.left-arrow {
-    left: 32px;
-}
+  .slick-prev {
+    left: auto;
+    right: -25px;
+  }
   
-.right-arrow {
-    right: 32px;
-}
   
 .dots {
     position: absolute;
