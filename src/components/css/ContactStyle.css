@@ -7,6 +7,10 @@
   font-size: 50px;
   color: #ffffff;
 }
+.contact label {
+  font-size: 50px;
+  color: #ffffff;
+}
 
 .contact-form {
   max-width: 600px;

@@ -15,6 +15,7 @@ import image6 from '../../images/img-6.jpg';
 
 
 
+
 export default function Home() {
   const [isExpanded1, setIsExpanded1] = useState(false);
   const [isExpanded2, setIsExpanded2] = useState(false);
@@ -71,7 +72,7 @@ export default function Home() {
         <div className="About-me-short">
           {/* Używamy komponentu MovingComponent do animacji tekstu */}
           <MovingComponent
-              type="unfold"
+              type="slideInFromBottom"
               duration="1000ms"
               delay="1s"
               direction="normal"
@@ -79,11 +80,20 @@ export default function Home() {
               iteration={1}
               fillMode="none"
             >
-            <h2>Witaj oto moje Portfolio</h2>
+            <h2>
+              <i class="fab fa-csharp"></i> C# 
+              <i class="fab fa-dot-net"></i> .NET 
+              <i class="fas fa-database"></i> MSSQL 
+              <i class="fab fa-js"></i> Javascript 
+              <i class="fab fa-react"></i> React 
+              <i class="fab fa-css3-alt"></i> CSS 
+              <i class="fab fa-sass"></i> SCSS 
+              <i class="fas fa-project-diagram"></i> Entity Framework i wiele więcej...
+            </h2>
           </MovingComponent>
         </div>
         <div className="container">
-          <h2>Moje Projekty</h2>
+          <h2>tutaj animacja węża zjadjącego kod</h2>
           <div className="article">
             <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
             <Slider images={imagesProject2} />

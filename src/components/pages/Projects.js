@@ -9,26 +9,26 @@ export default function Projects() {
       <h1>Projects</h1>
 
       <div className='ArticleSection' id='article1'>
-        <h2>Article 1</h2>
-        <p>Opis artykułu 1.</p>
+        <h2><span>Article 1</span></h2>
+        <p><span>Opis artykułu 1.</span></p>
         <img src='zdjecie1.jpg' alt='Zdjęcie 1' />
       </div>
 
       <div className='ArticleSection' id='article2'>
-        <h2>Article 2</h2>
-        <p>Opis artykułu 2.</p>
+        <h2><span>Article 2</span></h2>
+        <p><span>Opis artykułu 2.</span></p>
         <img src='zdjecie2.jpg' alt='Zdjęcie 2' />
       </div>
 
       <div className='ArticleSection' id='article3'>
-        <h2>Article 3</h2>
-        <p>Opis artykułu 3.</p>
+        <h2><span>Article 3</span></h2>
+        <p><span>Opis artykułu 3.</span></p>
         <img src='zdjecie3.jpg' alt='Zdjęcie 3' />
       </div>
 
       <div className='ArticleSection' id='article4'>
-        <h2>Article 4</h2>
-        <p>Opis artykułu 4.</p>
+        <h2><span>Article 4</span></h2>
+        <p><span>Opis artykułu 4.</span></p>
         <img src='zdjecie4.jpg' alt='Zdjęcie 4' />
       </div>
 

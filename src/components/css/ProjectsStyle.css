@@ -12,16 +12,35 @@
   
   .ArticleSection h2 {
     font-size: 24px;
+    color: rgb(0, 0, 0);
+    display: block;
+  }
+  
+  .ArticleSection h2 span {
+    background-color: white;
+    padding: 2%;
+    display: inline-block; /* Dodane */
   }
   
   .ArticleSection p {
     font-size: 16px;
+    color: rgb(0, 0, 0);
+    display: block;
   }
+  
+  .ArticleSection p span {
+    background-color: white;
+    padding: 2%;
+    display: inline-block; /* Dodane */
+  }
+  
+  
   
   .ArticleSection img {
     max-width: 100%;
     height: auto;
   }
+  
   
   .NavigationButtons {
     position: fixed;
