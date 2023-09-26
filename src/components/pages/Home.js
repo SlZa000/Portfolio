@@ -81,14 +81,14 @@ export default function Home() {
               fillMode="none"
             >
             <h2>
-              <i class="fab fa-csharp"></i> C# 
-              <i class="fab fa-dot-net"></i> .NET 
-              <i class="fas fa-database"></i> MSSQL 
-              <i class="fab fa-js"></i> Javascript 
-              <i class="fab fa-react"></i> React 
-              <i class="fab fa-css3-alt"></i> CSS 
-              <i class="fab fa-sass"></i> SCSS 
-              <i class="fas fa-project-diagram"></i> Entity Framework i wiele więcej...
+              C# 
+              .NET 
+              MSSQL<i class="fas fa-database"></i>
+              Javascript<i class="fab fa-js"></i>
+              React<i class="fab fa-react"></i>
+              CSS<i class="fab fa-css3-alt"></i>
+              SCSS<i class="fab fa-sass"></i>
+              Entity Framework <i class="fas fa-project-diagram"></i> i wiele więcej...
             </h2>
           </MovingComponent>
         </div>
@@ -104,8 +104,8 @@ export default function Home() {
             <button className="toggle-button" onClick={handleToggle1}>
               Rozwiń/Zwiń opis
             </button>
-            <Link to="/netapi">
-              <button className="see-more-button">Przejdź do netapi</button>
+            <Link to="/Netapi">
+              <button className="see-more-button">Przejdź do Netapi</button>
             </Link>
           </div>
 
@@ -120,8 +120,8 @@ export default function Home() {
             <button className="toggle-button" onClick={handleToggle2}>
               Rozwiń/Zwiń opis
             </button>
-            <Link to="/netapi">
-              <button className="see-more-button">Przejdź do netapi</button>
+            <Link to="/Netapi">
+              <button className="see-more-button">Przejdź do Netapi</button>
             </Link>
           </div>
 
@@ -136,8 +136,8 @@ export default function Home() {
             <button className="toggle-button" onClick={handleToggle3}>
               Rozwiń/Zwiń opis
             </button>
-            <Link to="/netapi">
-              <button className="see-more-button">Przejdź do netapi</button>
+            <Link to="/Netapi">
+              <button className="see-more-button">Przejdź do Netapi</button>
             </Link>
           </div>
           
@@ -152,8 +152,8 @@ export default function Home() {
             <button className="toggle-button" onClick={handleToggle4}>
               Rozwiń/Zwiń opis
             </button>
-            <Link to="/netapi">
-              <button className="see-more-button">Przejdź do netapi</button>
+            <Link to="/Netapi">
+              <button className="see-more-button">Przejdź do Netapi</button>
             </Link>
           </div>
           

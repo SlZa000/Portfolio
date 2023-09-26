@@ -6,6 +6,22 @@
     justify-content: space-around; /* Dodane */
   }
   
+  .fab.fa-js {
+    color: #F7DF1E; /* Złoty */
+}
+
+.fab.fa-react {
+    color: #61DAFB; /* Jasnoniebieski */
+}
+
+.fab.fa-css3-alt {
+    color: #1572B6; /* Granatowy */
+}
+
+.fab.fa-sass {
+    color: #CC6699; /* Różowy */
+}
+
   .article {
     width: 40%;
     margin: 5%;
@@ -17,8 +33,6 @@
     align-self: flex-start; /* Dodane */
     border-radius: 30px;
 }
-
-
 
 
 .article .see-more-button, .article .toggle-button {

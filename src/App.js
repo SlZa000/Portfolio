@@ -4,21 +4,27 @@ import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Projects from './components/pages/Projects';
-import aboutme from './components/pages/aboutme';
 import Contact from './components/pages/Contact';
-import netapi from './components/pages/netapi';
-import fronttech from './components/pages/fronttech';
+import Netapi from './components/pages/Netapi';
+import Fronttech from './components/pages/Fronttech';
+
+
+const HomeWithMargin = () => <div style={{marginTop: '80px'}}><Home /></div>;
+const ProjectsWithMargin = () => <div style={{marginTop: '80px'}}><Projects /></div>;
+const NetapiWithMargin = () => <div style={{marginTop: '80px'}}><Netapi /></div>;
+const FronttechWithMargin = () => <div style={{marginTop: '80px'}}><Fronttech /></div>;
+
+
 
 function App() {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/Projects' component={Projects} />
-        <Route path='/aboutme' component={aboutme} />
-        <Route path='/netapi' component={netapi} />
-        <Route path='/fronttech' component={fronttech} />
+        <Route path='/' exact component={HomeWithMargin} />
+        <Route path='/Projects' component={ProjectsWithMargin} />
+        <Route path='/Netapi' component={NetapiWithMargin} />
+        <Route path='/Fronttech' component={FronttechWithMargin} />
       </Switch>
       <div className="contact">
         <Contact />

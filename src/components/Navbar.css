@@ -34,7 +34,6 @@
   white-space: nowrap; /* Zapobiega zawijaniu tekstu */
   overflow: hidden; /* Zapobiega ukrywaniu tekstu, gdy jest za długi */
   max-width: 100%;
-  text-decoration: none !important; 
 }
 
 

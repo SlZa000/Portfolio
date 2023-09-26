@@ -38,6 +38,12 @@ function Navbar() {
       setDropdown(false);
       setMobileDropdown(false);
     });
+
+    // Usuwanie podkreślenia odnośnika
+    var link = document.querySelector('.navbar-logo');
+    if (link) {
+      link.style.textDecoration = 'none';
+    }
   }, [history]);
 
   const scrollToTop = () => {

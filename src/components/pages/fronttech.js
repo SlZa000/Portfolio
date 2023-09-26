@@ -1,9 +1,13 @@
 import React from 'react';
+import '../css/FronttechStyle.css';
 
-export default function fronttech() {
+export default function Fronttech() {
   return (
     <>
-      <h1 className='fronttech'>fronttech</h1>
+      <div className='Fronttech'>
+        <h1 className='Fronttech'>Fronttech</h1>
+        <p>asdfadsf</p>
+      </div>
     </>
   );
 }

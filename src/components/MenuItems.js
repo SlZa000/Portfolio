@@ -1,12 +1,12 @@
 export const MenuItems = [
   {
     title: '.Net Api & MSSql',
-    path: '/netapi',
+    path: '/Netapi',
     cName: 'dropdown-link'
   },
   {
     title: 'Front-end z Reactem',
-    path: '/fronttech',
+    path: '/Fronttech',
     cName: 'dropdown-link'
   },
 ];
