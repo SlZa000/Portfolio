@@ -25,7 +25,7 @@
   .article {
     width: 40%;
     margin: 5%;
-    padding: 5%;
+    padding: 3%;
     position: relative; 
     box-sizing: border-box;
     background-color: white; /* Dodane */
@@ -36,6 +36,13 @@
 .article h1{
   margin-bottom: 1em;
   color: black;
+}
+
+.article p{
+  margin-top: 1.5em;
+}
+.description p{
+  margin-top: 0em;
 }
 
 .article .see-more-button, .article .toggle-button {

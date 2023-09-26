@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ReactPortfolio2023/static/css/main.34e2eb4f.css",
-    "main.js": "/ReactPortfolio2023/static/js/main.08108e0e.js",
+    "main.css": "/ReactPortfolio2023/static/css/main.12c4f989.css",
+    "main.js": "/ReactPortfolio2023/static/js/main.ef7a139d.js",
     "static/media/img-2.jpg": "/ReactPortfolio2023/static/media/img-2.bb238fc1bea8ae2474d2.jpg",
     "static/media/img-4.jpg": "/ReactPortfolio2023/static/media/img-4.a31875b76d39f6458a6e.jpg",
     "static/media/img-6.jpg": "/ReactPortfolio2023/static/media/img-6.047226b0f6080d5b242c.jpg",
@@ -13,11 +13,11 @@
     "static/media/slick.ttf": "/ReactPortfolio2023/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/ReactPortfolio2023/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ReactPortfolio2023/index.html",
-    "main.34e2eb4f.css.map": "/ReactPortfolio2023/static/css/main.34e2eb4f.css.map",
-    "main.08108e0e.js.map": "/ReactPortfolio2023/static/js/main.08108e0e.js.map"
+    "main.12c4f989.css.map": "/ReactPortfolio2023/static/css/main.12c4f989.css.map",
+    "main.ef7a139d.js.map": "/ReactPortfolio2023/static/js/main.ef7a139d.js.map"
   },
   "entrypoints": [
-    "static/css/main.34e2eb4f.css",
-    "static/js/main.08108e0e.js"
+    "static/css/main.12c4f989.css",
+    "static/js/main.ef7a139d.js"
   ]
 }
