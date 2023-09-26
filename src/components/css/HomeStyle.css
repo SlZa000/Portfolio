@@ -110,4 +110,7 @@
       position: static; /* Dodane */
       margin: 20px auto; /* Dodane */
     }
+    .About-me-short h2 {
+      font-size: 1em;
+    }
   }
