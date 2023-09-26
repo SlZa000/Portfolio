@@ -80,6 +80,7 @@
   opacity: 0;
   animation: fadeIn 1s ease 1s forwards;
   font-family: 'Ysabeau Office', sans-serif; /* Dodane */
+  margin-top: 1em;
 }
 .About-me-short i{
   margin:0em 0.5em 0em 0.5em;

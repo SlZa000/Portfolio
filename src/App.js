@@ -7,13 +7,13 @@ import Projects from './components/pages/Projects';
 import Contact from './components/pages/Contact';
 import Netapi from './components/pages/Netapi';
 import Fronttech from './components/pages/Fronttech';
-
+import Documents from './components/pages/Documents';
 
 const HomeWithMargin = () => <div style={{marginTop: '80px'}}><Home /></div>;
 const ProjectsWithMargin = () => <div style={{marginTop: '80px'}}><Projects /></div>;
 const NetapiWithMargin = () => <div style={{marginTop: '80px'}}><Netapi /></div>;
 const FronttechWithMargin = () => <div style={{marginTop: '80px'}}><Fronttech /></div>;
-
+const DocumentsWithMargin = () => <div style={{marginTop: '80px'}}><Documents /></div>;
 
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
       <Switch>
         <Route path='/' exact component={HomeWithMargin} />
         <Route path='/Projects' component={ProjectsWithMargin} />
+        <Route path='/Documents' component={DocumentsWithMargin} />
         <Route path='/Netapi' component={NetapiWithMargin} />
         <Route path='/Fronttech' component={FronttechWithMargin} />
       </Switch>

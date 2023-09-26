@@ -64,7 +64,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
+    <nav className='navbar'>
+      <div className='navbar-box'>
       <Link to='/' className='navbar-logo' onClick={scrollToTop}>
         <div className="logo-container">
           <img src={logo123} alt="logo" />
@@ -107,6 +108,11 @@ function Navbar() {
           </li>
           {window.innerWidth < 960 && (dropdown || (click && mobileDropdown)) && <Dropdown closeMobileMenu={closeMobileMenu} />}
           <li className='nav-item'>
+            <Link to='/Documents' className={`nav-links ${click ? 'nav-links-mobile' : ''}`} onClick={() => { closeMobileMenu(); scrollToTop(); }}>
+              Documents
+            </Link>
+          </li>
+          <li className='nav-item'>
             <ScrollLink
               to='contact'
               spy={true}
@@ -119,6 +125,7 @@ function Navbar() {
             </ScrollLink>
           </li>
         </ul>
+        </div>
       </nav>
     </>
   );

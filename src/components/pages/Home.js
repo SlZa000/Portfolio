@@ -93,7 +93,7 @@ export default function Home() {
           </MovingComponent>
         </div>
         <div className="container">
-          <h2>tutaj animacja węża zjadjącego kod</h2>
+          <h2>Projekty</h2>
           <div className="article">
             <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
             <Slider images={imagesProject2} />

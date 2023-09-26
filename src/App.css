@@ -8,6 +8,7 @@
 .home,
 .Projects,
 .Netapi,
+.Documents,
 .Fronttech {
   align-items: center;
   justify-content: center;
@@ -17,6 +18,7 @@
 .Projects,
 .Netapi,
 .Fronttech,
+.Documents,
 .aboutme,
 .contact {
   position: relative; /* Add this to position content elements */
