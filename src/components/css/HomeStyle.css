@@ -33,7 +33,9 @@
     align-self: flex-start; /* Dodane */
     border-radius: 30px;
 }
-
+.article h1{
+  margin-bottom: 1em;
+}
 
 .article .see-more-button, .article .toggle-button {
   background-color: #1888ff; /* Kolor tła */
@@ -62,7 +64,8 @@
 .article .toggle-button {
   display: block;
   margin: auto;
-  margin-bottom: 5%
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
   
@@ -111,6 +114,6 @@
       margin: 20px auto; /* Dodane */
     }
     .About-me-short h2 {
-      font-size: 1em;
+      font-size: 1.5em;
     }
   }
