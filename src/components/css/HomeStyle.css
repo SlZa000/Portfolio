@@ -25,7 +25,7 @@
   .article {
     width: 40%;
     margin: 5%;
-    padding: 5%;
+    padding: 3%;
     position: relative; 
     box-sizing: border-box;
     background-color: white; /* Dodane */
@@ -33,7 +33,17 @@
     align-self: flex-start; /* Dodane */
     border-radius: 30px;
 }
+.article h1{
+  margin-bottom: 1em;
+  color: black;
+}
 
+.article p{
+  margin-top: 1.5em;
+}
+.description p{
+  margin-top: 0em;
+}
 
 .article .see-more-button, .article .toggle-button {
   background-color: #1888ff; /* Kolor tła */
@@ -62,7 +72,8 @@
 .article .toggle-button {
   display: block;
   margin: auto;
-  margin-bottom: 5%
+  margin-bottom: 5%;
+  margin-top: 5%;
 }
 
   
@@ -109,5 +120,8 @@
     .article .see-more-button {
       position: static; /* Dodane */
       margin: 20px auto; /* Dodane */
+    }
+    .About-me-short h2 {
+      font-size: 1.5em;
     }
   }

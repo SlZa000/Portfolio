@@ -111,7 +111,7 @@ export default function Home() {
 
           {/* Projekt 2 */}
           <div className="article">
-            <h3>Projekt2</h3>
+          <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
             <Slider images={imagesProject2} /> {/* Użyj komponentu Slider zamiast <img> */}
             <p>Opis widoczny</p>
             <animated.div style={animation2} className={`description ${isExpanded2 ? 'expanded' : ''}`}>
@@ -127,7 +127,7 @@ export default function Home() {
 
           {/* Projekt 3 */}
           <div className="article">
-            <h3>Projekt3</h3>
+          <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
             <Slider images={imagesProject3} /> {/* Użyj komponentu Slider zamiast <img> */}
             <p>Opis widoczny</p>
             <animated.div style={animation3} className={`description ${isExpanded3 ? 'expanded' : ''}`}>
@@ -143,7 +143,7 @@ export default function Home() {
           
           {/* Projekt 4 */}
           <div className="article">
-            <h3>Projekt4</h3>
+          <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
             <Slider images={imagesProject2} />
             <p>Opis widoczny</p>
             <animated.div style={animation4} className={`description ${isExpanded4 ? 'expanded' : ''}`}>

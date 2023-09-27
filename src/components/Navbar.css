@@ -10,26 +10,27 @@
   width: 100%;
   top: 0;
   z-index: 100;
-  padding-top: 3em;
 }
-.navbar-box{
+
+.navbar-box {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
   margin: 3em;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 40px; /* Dodane */
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
   width: 95%;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  margin-left: 1em;
+  margin-left: 2em;
 }
 
 .logo-container img {
-  max-width: 55px;
+  max-width: 50px;
   height: auto;
   margin-right: 10px; /* Dodane odstępy między logo a tekstem */
 }
@@ -45,7 +46,6 @@
   overflow: hidden; /* Zapobiega ukrywaniu tekstu, gdy jest za długi */
   max-width: 100%;
 }
-
 
 .fa-firstdraft {
   margin-left: 0.5rem;
@@ -98,24 +98,37 @@
   .nav-links-mobile {
     position: relative;
   }
-  
-  .navbar-box{
+
+  .navbar-box {
     display: block;
   }
 
   .navbar {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     padding-top: 0em !important;
+    display: flex;
+    justify-content: space-between; /* Dodane, aby elementy logo i menu były na przeciwnych końcach */
+  }
+
+  .navbar-logo {
+    position: static; /* Dodane, aby przykleić logo do lewej krawędzi */
+    transform: none; /* Dodane, aby zresetować transformację */
+  }
+
+  .menu-icon {
+    position: static; /* Dodane, aby przykleić menu-icon do prawej krawędzi */
+    transform: none; /* Dodane, aby zresetować transformację */
   }
 
   .drop-nav-links-mobile {
-    width: 73.5% !important;
-  }
+    width: 64% !important;
+    margin-right: 0% !important;
+}
 
   .nav-item:first-child {
     margin-top: 2em;
   }
-  
+
   .nav-item:last-child {
     margin-bottom: 2em;
   }
@@ -177,7 +190,7 @@
     display: block;
     text-align: center;
     padding: 1.5rem;
-    margin: 2em 0em 2em 3em;
+    margin: auto;
     border-radius: 4px;
     width: 80%;
     background: #1888ff;
@@ -192,7 +205,26 @@
     transition: 250ms;
   }
 
-  button {
-    display: none;
+}
+@media screen and (max-width: 470px) {
+  .navbar-logo {
+    left:-15%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .navbar-logo span {
+    font-size: 1.5rem;
+  }
+  .navbar {
+    height: 65px;
+  }
+  .menu-icon {
+    font-size: 1.5rem;
+  }
+  .logo-container img {
+    max-width: 35px;
+  }
+  .nav-menu {
+    top: 65px;
   }
 }
