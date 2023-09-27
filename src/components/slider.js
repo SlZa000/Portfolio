@@ -10,6 +10,10 @@ class PhotoSlider extends React.Component {
     this.slider = React.createRef();
   }
 
+  componentDidMount() {
+    this.slider.current.slickGoTo(this.props.images.length - 1); // Przewiń do ostatniego zdjęcia po załadowaniu komponentu
+  }
+
   render() {
     const settings = {
       dots: true,
