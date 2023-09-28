@@ -97,7 +97,6 @@ export default function Home() {
           </MovingComponent>
         </div>
         <div className='container'>
-          <h2>Projekty123</h2>
           <div className='article'>
         <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
         <Slider images={imagesProject2} />
