@@ -1,4 +1,44 @@
-.Netapi{
-    position: relative; /* Add this to position content elements */
-    z-index: 2; /* Add this to give content a higher z-index */
-}
+/* Styl dla całego bloku .Netapi */
+.Netapi {
+    position: relative;
+    z-index: 2;
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  /* Styl dla nagłówka .Netapi-title i .Netapi-section-title span */
+  .Netapi-title,
+  .Netapi-section-title {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 2%;
+    display: table; /* Zmieniamy display na "inline-block" */
+  }
+  .Netapi-section-titl{
+    margin: 0.5em;
+  }
+  
+  /* Styl dla znaczników h2 */
+  h2.Netapi-section-title {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin: 0.5em 0;
+    padding: 2%;
+    display: inline-block; /* Zmieniamy display na "inline-block" */
+  }
+  
+  /* Styl dla tekstu .Netapi-text */
+  .Netapi-text {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    display: block; /* Zmieniamy display na "block" */
+    background-color: white;
+    border-radius: 10px;
+    margin: 0.5em 0;
+    padding: 2%;
+    display: table;
+  }
+  

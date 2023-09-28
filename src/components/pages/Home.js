@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import '../../App.css';
 import '../css/HomeStyle.css';
 import { Link } from 'react-router-dom';
@@ -19,29 +19,33 @@ export default function Home() {
   const [isExpanded3, setIsExpanded3] = useState(false);
   const [isExpanded4, setIsExpanded4] = useState(false);
 
-  const animation1 = useSpring({
-    height: isExpanded1 ? '50px' : '0px',
-    opacity: isExpanded1 ? 1 : 0,
-    overflow: 'hidden',
-  });
+  const contentRef1 = useRef(null);
+  const contentRef2 = useRef(null);
+  const contentRef3 = useRef(null);
+  const contentRef4 = useRef(null);
 
-  const animation2 = useSpring({
-    height: isExpanded2 ? '50px' : '0px',
-    opacity: isExpanded2 ? 1 : 0,
-    overflow: 'hidden',
-  });
-
-  const animation3 = useSpring({
-    height: isExpanded3 ? '50px' : '0px',
-    opacity: isExpanded3 ? 1 : 0,
-    overflow: 'hidden',
-  });
-
-  const animation4 = useSpring({
-    height: isExpanded4 ? '50px' : '0px',
-    opacity: isExpanded4 ? 1 : 0,
-    overflow: 'hidden',
-  });
+  useEffect(() => {
+    if (isExpanded1) {
+      contentRef1.current.style.maxHeight = `${contentRef1.current.scrollHeight}px`;
+    } else {
+      contentRef1.current.style.maxHeight = '0px';
+    }
+    if (isExpanded2) {
+      contentRef2.current.style.maxHeight = `${contentRef2.current.scrollHeight}px`;
+    } else {
+      contentRef2.current.style.maxHeight = '0px';
+    }
+    if (isExpanded3) {
+      contentRef3.current.style.maxHeight = `${contentRef3.current.scrollHeight}px`;
+    } else {
+      contentRef3.current.style.maxHeight = '0px';
+    }
+    if (isExpanded4) {
+      contentRef4.current.style.maxHeight = `${contentRef4.current.scrollHeight}px`;
+    } else {
+      contentRef4.current.style.maxHeight = '0px';
+    }
+  }, [isExpanded1, isExpanded2, isExpanded3, isExpanded4]);
 
   const handleToggle1 = () => {
     setIsExpanded1(!isExpanded1);
@@ -95,64 +99,67 @@ export default function Home() {
         <div className='container'>
           <h2>Projekty123</h2>
           <div className='article'>
-            <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
-            <Slider images={imagesProject2} />
-            <p>Opis widoczny</p>
-            <animated.div style={animation1} className={`description ${isExpanded1 ? 'expanded' : ''}`}>
-              {isExpanded1 && <p>What is Lorem Ipsum?</p>}
-            </animated.div>
-            <button className='toggle-button' onClick={handleToggle1}>
-              Rozwiń/Zwiń opis
-            </button>
-            <Link to='/Netapi'>
-              <button className='see-more-button'>Przejdź do Netapi</button>
-            </Link>
-          </div>
+        <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
+        <Slider images={imagesProject2} />
+        <p>Aplikacja Notes.API to projekt oparty na platformie .NET Core, który oferuje </p>
+        <div ref={contentRef1} className={`description ${isExpanded1 ? 'expanded' : ''}`}>
+          {isExpanded1 && <p>API RESTful do zarządzania notatkami i wydarzeniami. Jest to przykładowa aplikacja, która może być używana jako punkt wyjścia do tworzenia bardziej zaawansowanych systemów lub narzędzi zarządzania informacjami. W tej dokumentacji omówimy wszystkie kluczowe elementy tej aplikacji, jej strukturę i możliwe przypadki użycia.
+</p>}
+        </div>
+        <button className='toggle-button' onClick={handleToggle1}>
+          Rozwiń/Zwiń opis
+        </button>
+        <Link to='/Netapi'>
+          <button className='see-more-button'>Przejdź do pełnego opisu Notes.Api</button>
+        </Link>
+      </div>
 
-          <div className='article'>
-            <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
-            <Slider images={imagesProject2} />
-            <p>Opis widoczny</p>
-            <animated.div style={animation2} className={`description ${isExpanded2 ? 'expanded' : ''}`}>
-              {isExpanded2 && <p>Opis rozwinięty</p>}
-            </animated.div>
-            <button className='toggle-button' onClick={handleToggle2}>
-              Rozwiń/Zwiń opis
-            </button>
-            <Link to='/Netapi'>
-              <button className='see-more-button'>Przejdź do Netapi</button>
-            </Link>
-          </div>
+      <div className='article'>
+        <h1>Dokumentacja Projektu "React Portfolio"</h1>
+        <Slider images={imagesProject2} />
+        <p>React Portfolio to aplikacja internetowa typu Single Page Application (SPA) stworzona w oparciu o bibliotekę React. </p>
+        <div ref={contentRef2} className={`description ${isExpanded2 ? 'expanded' : ''}`}>
+          {isExpanded2 && <p>Głównym celem aplikacji jest umożliwienie programiście zaprezentowania swojego portfolio oraz ułatwienie kontaktu z potencjalnymi klientami lub pracodawcami. Projekt wykorzystuje różnorodne technologie i biblioteki do stworzenia dynamicznego interfejsu użytkownika (UI) oraz efektownych animacji.
+</p>}
+        </div>
+        <button className='toggle-button' onClick={handleToggle2}>
+          Rozwiń/Zwiń opis
+        </button>
+        <Link to='/Fronttech'>
+          <button className='see-more-button'>Przejdź do pełnego opisu REACT Portfolio</button>
+        </Link>
+      </div>
 
-          <div className='article'>
-            <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
-            <Slider images={imagesProject3} />
-            <p>Opis widoczny</p>
-            <animated.div style={animation3} className={`description ${isExpanded3 ? 'expanded' : ''}`}>
-              {isExpanded3 && <p>Opis rozwinięty</p>}
-            </animated.div>
-            <button className='toggle-button' onClick={handleToggle3}>
-              Rozwiń/Zwiń opis
-            </button>
-            <Link to='/Netapi'>
-              <button className='see-more-button'>Przejdź do Netapi</button>
-            </Link>
-          </div>
+      <div className='article'>
+        <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
+        <Slider images={imagesProject3} />
+        <p>Opis widoczny</p>
+        <div ref={contentRef3} className={`description ${isExpanded3 ? 'expanded' : ''}`}>
+          {isExpanded3 && <p>Opis rozwinięty</p>}
+        </div>
+        <button className='toggle-button' onClick={handleToggle3}>
+          Rozwiń/Zwiń opis
+        </button>
+        <Link to='/Netapi'>
+          <button className='see-more-button'>Przejdź do Netapi</button>
+        </Link>
+      </div>
 
-          <div className='article'>
-            <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
-            <Slider images={imagesProject2} />
-            <p>Opis widoczny</p>
-            <animated.div style={animation4} className={`description ${isExpanded4 ? 'expanded' : ''}`}>
-              {isExpanded4 && <p>Opis rozwinięty</p>}
-            </animated.div>
-            <button className='toggle-button' onClick={handleToggle4}>
-              Rozwiń/Zwiń opis
-            </button>
-            <Link to='/Netapi'>
-              <button className='see-more-button'>Przejdź do Netapi</button>
-            </Link>
-          </div>
+      <div className='article'>
+        <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
+        <Slider images={imagesProject2} />
+        <p>Opis widoczny</p>
+        <div ref={contentRef4} className={`description ${isExpanded4 ? 'expanded' : ''}`}>
+          {isExpanded4 && <p>Opis rozwinięty</p>}
+        </div>
+        <button className='toggle-button' onClick={handleToggle4}>
+          Rozwiń/Zwiń opis
+        </button>
+        <Link to='/Netapi'>
+          <button className='see-more-button'>Przejdź do Netapi</button>
+        </Link>
+      </div>
+
         </div>
       </div>
       <AboutMe />

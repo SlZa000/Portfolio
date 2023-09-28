@@ -1,4 +1,48 @@
 .Fronttech{
     position: relative; /* Add this to position content elements */
     z-index: 2; /* Add this to give content a higher z-index */
+    margin: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.PortfolioSection-title span {
+    background-color: white;
+    padding: 2%;
+    display: inline-block;
+    color:black;
+    border-radius: 10px;
+    margin:0.5em;
+}
+  
+.PortfolioSection-description {
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    display: block;
+}
+  
+.PortfolioSection-description span {
+    background-color: white;
+    padding: 2%;
+    display: inline-block;
+    border-radius: 10px;
+    margin:0.5em;
+}
+  
+.PortfolioSection-list {
+    background-color: white; /* Set the background color of the list */
+    padding: 2%;
+    border-radius: 10px;
+    margin:0.5em;
+}
+
+.PortfolioSection-list li {
+    list-style-type: disc; /* Style of bullets in the list */
+    margin-left: 20px; /* Margin from the left side */
+    display: list-item; /* Display list items one below the other */
+}
+  
+.PortfolioSection-image img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px; /* Add space from the image */
 }

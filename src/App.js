@@ -11,7 +11,7 @@ import Documents from './components/pages/Documents';
 
 // Komponent z marginesem dla stron
 const PageWithMargin = ({ component: Component }) => (
-  <div style={{ marginTop: '80px' }}>
+  <div style={{ marginTop: '100px' }}>
     <Component />
   </div>
 );
