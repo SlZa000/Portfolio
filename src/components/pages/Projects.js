@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 export default function Projects() {
   return (
     <div className='Projects'>
-      <h1 className='Projects-title'>Projects</h1>
+      <h1 className='Projects-title'>Projekty</h1>
 
       <div className='ArticleSection' id='article1'>
         <h2 className='ArticleSection-title'><span>Dokumentacja Aplikacji Notes.API</span></h2>

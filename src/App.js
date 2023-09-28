@@ -5,8 +5,8 @@ import './App.css';
 import Home from './components/pages/Home';
 import Projects from './components/pages/Projects';
 import Contact from './components/pages/Contact';
-import Netapi from './components/pages/Netapi';
-import Fronttech from './components/pages/Fronttech';
+import Netapi from './components/pages/netapi';
+import Fronttech from './components/pages/fronttech';
 import Documents from './components/pages/Documents';
 
 // Komponent z marginesem dla stron
