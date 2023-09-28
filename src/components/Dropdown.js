@@ -1,4 +1,3 @@
-// Dropdown.js
 import React, { useState } from 'react';
 import { MenuItems } from './MenuItems';
 import './Dropdown.css';
@@ -19,23 +18,21 @@ function Dropdown({ closeMobileMenu }) {
         onClick={handleClick}
         className={click ? 'dropdown-menu clicked' : 'dropdown-menu'}
       >
-        {MenuItems.map((item, index) => {
-          return (
-            <li key={index}>
-              <Link
-                className={item.cName}
-                to={item.path}
-                onClick={() => {
-                  setClick(false);
-                  closeMobileMenu(); // Wywołujemy funkcję z komponentu Navbar
-                  scrollToTop(); // Przewiń do góry po zmianie podstrony
-                }}
-              >
-                {item.title}
-              </Link>
-            </li>
-          );
-        })}
+        {MenuItems.map((item, index) => (
+          <li key={index}>
+            <Link
+              className="dropdown-link"
+              to={item.path}
+              onClick={() => {
+                setClick(false);
+                closeMobileMenu();
+                scrollToTop();
+              }}
+            >
+              {item.title}
+            </Link>
+          </li>
+        ))}
       </ul>
     </>
   );

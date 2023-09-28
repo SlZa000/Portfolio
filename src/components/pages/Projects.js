@@ -1,35 +1,33 @@
-// Projects.js
-import '../css/ProjectsStyle.css';
 import React from 'react';
-
+import '../css/ProjectsStyle.css';
 
 export default function Projects() {
   return (
     <div className='Projects'>
-      <h1>Projects</h1>
+      <h1 className='Projects-title'>Projects</h1>
 
       <div className='ArticleSection' id='article1'>
-        <h2><span>Article 1</span></h2>
-        <p><span>Opis artykułu 1.</span></p>
-        <img src='zdjecie1.jpg' alt='Zdjęcie 1' />
+        <h2 className='ArticleSection-title'><span>Article 1</span></h2>
+        <p className='ArticleSection-description'><span>Opis artykułu 1.</span></p>
+        <img src='zdjecie1.jpg' alt='Zdjęcie 1' className='ArticleSection-image' />
       </div>
 
       <div className='ArticleSection' id='article2'>
-        <h2><span>Article 2</span></h2>
-        <p><span>Opis artykułu 2.</span></p>
-        <img src='zdjecie2.jpg' alt='Zdjęcie 2' />
+        <h2 className='ArticleSection-title'><span>Article 2</span></h2>
+        <p className='ArticleSection-description'><span>Opis artykułu 2.</span></p>
+        <img src='zdjecie2.jpg' alt='Zdjęcie 2' className='ArticleSection-image' />
       </div>
 
       <div className='ArticleSection' id='article3'>
-        <h2><span>Article 3</span></h2>
-        <p><span>Opis artykułu 3.</span></p>
-        <img src='zdjecie3.jpg' alt='Zdjęcie 3' />
+        <h2 className='ArticleSection-title'><span>Article 3</span></h2>
+        <p className='ArticleSection-description'><span>Opis artykułu 3.</span></p>
+        <img src='zdjecie3.jpg' alt='Zdjęcie 3' className='ArticleSection-image' />
       </div>
 
       <div className='ArticleSection' id='article4'>
-        <h2><span>Article 4</span></h2>
-        <p><span>Opis artykułu 4.</span></p>
-        <img src='zdjecie4.jpg' alt='Zdjęcie 4' />
+        <h2 className='ArticleSection-title'><span>Article 4</span></h2>
+        <p className='ArticleSection-description'><span>Opis artykułu 4.</span></p>
+        <img src='zdjecie4.jpg' alt='Zdjęcie 4' className='ArticleSection-image' />
       </div>
 
       <div className='NavigationButtons'>

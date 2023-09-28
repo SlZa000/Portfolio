@@ -1,3 +1,4 @@
+/* Dropdown.css */
 .dropdown-menu {
   background: red;
   width: 200px;
@@ -31,20 +32,21 @@
 
 @media screen and (max-width: 960px) {
   .fa-caret-down {
-    height: 4.1em; /* Wysokość 100% */
-    width: 16.5%; /* Szerokość 20% */
+    height: 4.1em;
+    width: 16.5%;
     background-color: black;
-    color:#fff;
+    color: #fff;
     display: flex;
     align-items: center;
     margin-right: auto;
     justify-content: center;
   }
+
   .dropdown-menu {
-    position: initial; /* Ustaw pozycję absolutną */
+    position: initial;
     display: block;
-    width: 80%; /* Rozwiń dropdown na całą szerokość */
-    background: red; /* Kolor tła dropdown */
+    width: 80%;
+    background: red;
     list-style: none;
     text-align: start;
     margin: auto;

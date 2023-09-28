@@ -1,59 +1,54 @@
-/* Projects.css */
-
+/* ProjectsStyle.css */
 .Projects {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .ArticleSection {
-    margin: 40px 0;
-  }
-  
-  .ArticleSection h2 {
-    font-size: 24px;
-    color: rgb(0, 0, 0);
-    display: block;
-  }
-  
-  .ArticleSection h2 span {
-    background-color: white;
-    padding: 2%;
-    display: inline-block; /* Dodane */
-  }
-  
-  .ArticleSection p {
-    font-size: 16px;
-    color: rgb(0, 0, 0);
-    display: block;
-  }
-  
-  .ArticleSection p span {
-    background-color: white;
-    padding: 2%;
-    display: inline-block; /* Dodane */
-  }
-  
-  
-  
-  .ArticleSection img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  
-  .NavigationButtons {
-    position: fixed;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .NavigationButtons button {
-    display: block;
-    margin: 10px 0;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.ArticleSection {
+  margin: 40px 0;
+}
+
+.ArticleSection-title {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  display: block;
+}
+
+.ArticleSection-title span {
+  background-color: white;
+  padding: 2%;
+  display: inline-block;
+}
+
+.ArticleSection-description {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  display: block;
+}
+
+.ArticleSection-description span {
+  background-color: white;
+  padding: 2%;
+  display: inline-block;
+}
+
+.ArticleSection-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.NavigationButtons {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.NavigationButtons button {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}

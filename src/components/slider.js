@@ -1,17 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './slider.css';
 
-class PhotoSlider extends React.Component {
+class PhotoSlider extends Component {
   constructor(props) {
     super(props);
     this.slider = React.createRef();
   }
 
   componentDidMount() {
-    this.slider.current.slickGoTo(this.props.images.length - 1); // Przewiń do ostatniego zdjęcia po załadowaniu komponentu
+    this.slider.current.slickGoTo(this.props.images.length - 1);
   }
 
   render() {
@@ -24,8 +24,8 @@ class PhotoSlider extends React.Component {
       swipeToSlide: true,
       centerMode: true,
       centerPadding: '0',
-      nextArrow: <SamplePrevArrow sliderRef={this.slider} />, // Przekazanie referencji do strzałek
-      prevArrow: <SampleNextArrow sliderRef={this.slider} />, // Przekazanie referencji do strzałek
+      nextArrow: <SamplePrevArrow sliderRef={this.slider} />,
+      prevArrow: <SampleNextArrow sliderRef={this.slider} />,
     };
 
     return (
@@ -33,7 +33,7 @@ class PhotoSlider extends React.Component {
         <Slider ref={this.slider} {...settings}>
           {this.props.images.map((image, index) => (
             <div key={index}>
-              <img src={image} alt='image' className='image' />
+              <img src={image} alt='image' className='slider-image' />
             </div>
           ))}
         </Slider>
@@ -47,10 +47,10 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "white" }}
+      style={{ ...style, display: 'block', background: 'white' }}
       onClick={() => {
         if (sliderRef.current) {
-          sliderRef.current.slickPrev(); // Odwrócenie logiki przewijania
+          sliderRef.current.slickPrev();
         }
       }}
     />
@@ -62,10 +62,10 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "white" }}
+      style={{ ...style, display: 'block', background: 'white' }}
       onClick={() => {
         if (sliderRef.current) {
-          sliderRef.current.slickNext(); // Odwrócenie logiki przewijania
+          sliderRef.current.slickNext();
         }
       }}
     />

@@ -33,14 +33,12 @@ function Navbar() {
   };
 
   useEffect(() => {
-    // Zamykanie Dropdown po zmianie routingu
     history.listen(() => {
       setDropdown(false);
       setMobileDropdown(false);
     });
 
-    // Usuwanie podkreślenia odnośnika
-    var link = document.querySelector('.navbar-logo');
+    const link = document.querySelector('.navbar-logo');
     if (link) {
       link.style.textDecoration = 'none';
     }
@@ -63,26 +61,25 @@ function Navbar() {
   };
 
   return (
-    <>
     <nav className='navbar'>
       <div className='navbar-box'>
-      <Link to='/' className='navbar-logo' onClick={scrollToTop}>
-        <div className="logo-container">
-          <img src={logo123} alt="logo" />
-          <span className="navbar-logo-text">Sławomir Zając</span>
-        </div>
-      </Link>
+        <Link to='/' className='navbar-logo' onClick={scrollToTop}>
+          <div className="logo-container">
+            <img src={logo123} alt="logo" className="logo-img" />
+            <span className="navbar-logo-text">Sławomir Zając</span>
+          </div>
+        </Link>
         <div className='menu-icon' onClick={handleClick}>
           <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className='nav-item'>
-            <Link to='/' className={`nav-links ${click ? 'nav-links-mobile' : ''}`} onClick={() => { closeMobileMenu(); scrollToTop(); }}>
+            <Link to='/' className={`nav-link ${click ? 'nav-link-mobile' : ''}`} onClick={() => { closeMobileMenu(); scrollToTop(); }}>
               Start
             </Link>
           </li>
           <li className='nav-item'>
-            <Links smooth to="/#aboutme" className={`nav-links ${click ? 'nav-links-mobile' : ''}`} onClick={closeMobileMenu}>
+            <Links smooth to="/#aboutme" className={`nav-link ${click ? 'nav-link-mobile' : ''}`} onClick={closeMobileMenu}>
               O mnie
             </Links>
           </li>
@@ -93,22 +90,22 @@ function Navbar() {
           >
             <Link
               to='/projects'
-              className={`nav-links ${click ? 'drop-nav-links-mobile nav-links-mobile' : ''}`}
+              className={`nav-link ${click ? 'drop-nav-link-mobile nav-link-mobile' : ''}`}
               onClick={() => { handleDesktopClick(); closeMobileMenu(); scrollToTop(); }}
             >
-              Projekty   
+              Projekty
               {window.innerWidth >= 960 && (
                 <i className='fas fa-caret-down' onClick={handleMobileClick} />
               )}
             </Link>
             {window.innerWidth < 960 && (
-                <i className='fas fa-caret-down' onClick={handleMobileClick} />
-              )}
+              <i className='fas fa-caret-down' onClick={handleMobileClick} />
+            )}
             {window.innerWidth >= 960 && (dropdown || (click && mobileDropdown)) && <Dropdown closeMobileMenu={closeMobileMenu} />}
           </li>
           {window.innerWidth < 960 && (dropdown || (click && mobileDropdown)) && <Dropdown closeMobileMenu={closeMobileMenu} />}
           <li className='nav-item'>
-            <Link to='/Documents' className={`nav-links ${click ? 'nav-links-mobile' : ''}`} onClick={() => { closeMobileMenu(); scrollToTop(); }}>
+            <Link to='/Documents' className={`nav-link ${click ? 'nav-link-mobile' : ''}`} onClick={() => { closeMobileMenu(); scrollToTop(); }}>
               Documents
             </Link>
           </li>
@@ -118,16 +115,15 @@ function Navbar() {
               spy={true}
               smooth={true}
               duration={500}
-              className={`nav-links ${click ? 'nav-links-mobile' : ''}`}
+              className={`nav-link ${click ? 'nav-link-mobile' : ''}`}
               onClick={closeMobileMenu}
             >
               Kontakt
             </ScrollLink>
           </li>
         </ul>
-        </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }
 

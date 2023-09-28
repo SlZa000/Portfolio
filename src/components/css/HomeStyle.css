@@ -1,68 +1,73 @@
+/* HomeStyle.css */
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Ysabeau+Office:wght@100&display=swap');
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; /* Dodane */
-  }
-  
-  .fab.fa-js {
-    color: #F7DF1E; /* Złoty */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fab.fa-js {
+  color: #F7DF1E;
 }
 
 .fab.fa-react {
-    color: #61DAFB; /* Jasnoniebieski */
+  color: #61DAFB;
 }
 
 .fab.fa-css3-alt {
-    color: #1572B6; /* Granatowy */
+  color: #1572B6;
 }
 
 .fab.fa-sass {
-    color: #CC6699; /* Różowy */
+  color: #CC6699;
 }
 
-  .article {
-    width: 40%;
-    margin: 5%;
-    padding: 3%;
-    position: relative; 
-    box-sizing: border-box;
-    background-color: white; /* Dodane */
-    box-shadow: inset 0px 0px 30px rgba(0,0,0,0.5); /* Dodane i zmienione na inset */
-    align-self: flex-start; /* Dodane */
-    border-radius: 30px;
+.article {
+  width: 40%;
+  margin: 5%;
+  padding: 3%;
+  position: relative;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.5);
+  align-self: flex-start;
+  border-radius: 30px;
 }
-.article h1{
+
+.article h1 {
   margin-bottom: 1em;
   color: black;
 }
 
-.article p{
+.article p {
   margin-top: 1.5em;
 }
-.description p{
+
+.description p {
   margin-top: 0em;
 }
 
-.article .see-more-button, .article .toggle-button {
-  background-color: #1888ff; /* Kolor tła */
-  color: rgb(255, 255, 255); /* Kolor tekstu */
-  border: 3px solid transparent; /* Dodane - transparentne obramowanie */
-  cursor: pointer; /* Kursor wskazujący */
-  padding: 5px 10px; /* Wypełnienie */
-  text-align: center; /* Wyśrodkowanie tekstu */
-  text-decoration: none; /* Brak dekoracji tekstu */
+.article .see-more-button,
+.article .toggle-button {
+  background-color: #1888ff;
+  color: rgb(255, 255, 255);
+  border: 3px solid transparent;
+  cursor: pointer;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  transition: background-color 0.4s, border 0.4s; /* Czas trwania animacji */
-  border-radius: 10px; /* Dodane - zaokrąglone krawędzie */
+  transition: background-color 0.4s, border 0.4s;
+  border-radius: 10px;
 }
 
-.article .see-more-button:hover, .article .toggle-button:hover {
-  background-color: rgb(0, 0, 0); /* Kolor tła po najechaniu */
-  color: rgb(255, 255, 255); /* Kolor tekstu po najechaniu */
-  border: 3px solid #1888ff; /* Dodane - obramowanie podczas hover */
+.article .see-more-button:hover,
+.article .toggle-button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 3px solid #1888ff;
 }
 
 .article .see-more-button {
@@ -76,52 +81,57 @@
   margin-top: 5%;
 }
 
-  
-  .container h2 {
-    color: rgb(255, 255, 255);
-    width: 100%;
-    font-size: 3em;
-    margin: 10% 10% 0 10%;
+.container h2 {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  font-size: 3em;
+  margin: 10% 10% 0 10%;
 }
 
-.About-me-short h2 {
+.AboutMeShort h2 {
   color: white;
   text-align: center;
   font-size: 3em;
   opacity: 0;
   animation: fadeIn 1s ease 1s forwards;
-  font-family: 'Ysabeau Office', sans-serif; /* Dodane */
+  font-family: 'Ysabeau Office', sans-serif;
   margin-top: 1em;
 }
-.About-me-short i{
-  margin:0em 0.5em 0em 0.5em;
+
+.AboutMeShort i {
+  margin: 0em 0.5em 0em 0.5em;
 }
 
-.About-me-short {
+.AboutMeShort {
   display: flex;
   width: 80%;
   justify-content: center;
   align-items: center;
-  margin:auto;
+  margin: auto;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-  
-@media screen and (max-width: 960px) {
-    .article {
-      flex: 1 0 auto; /* Zmienione na auto */
-      margin: 10%; /* Zmienione na 10% */
-      max-width: 80%; /* Dodane */
-    }
-  
-    .article .see-more-button {
-      position: static; /* Dodane */
-      margin: 20px auto; /* Dodane */
-    }
-    .About-me-short h2 {
-      font-size: 1.5em;
-    }
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .article {
+    flex: 1 0 auto;
+    margin: 10%;
+    max-width: 80%;
+  }
+
+  .article .see-more-button {
+    position: static;
+    margin: 20px auto;
+  }
+
+  .AboutMeShort h2 {
+    font-size: 1.5em;
+  }
+}

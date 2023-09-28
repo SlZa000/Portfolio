@@ -1,38 +1,45 @@
 import React from 'react';
+import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { HashRouter as Router, Switch, Route } from 'react-router-dom';
 import Projects from './components/pages/Projects';
 import Contact from './components/pages/Contact';
 import Netapi from './components/pages/Netapi';
 import Fronttech from './components/pages/Fronttech';
 import Documents from './components/pages/Documents';
 
-const HomeWithMargin = () => <div style={{marginTop: '80px'}}><Home /></div>;
-const ProjectsWithMargin = () => <div style={{marginTop: '80px'}}><Projects /></div>;
-const NetapiWithMargin = () => <div style={{marginTop: '80px'}}><Netapi /></div>;
-const FronttechWithMargin = () => <div style={{marginTop: '80px'}}><Fronttech /></div>;
-const DocumentsWithMargin = () => <div style={{marginTop: '80px'}}><Documents /></div>;
-
+// Komponent z marginesem dla stron
+const PageWithMargin = ({ component: Component }) => (
+  <div style={{ marginTop: '80px' }}>
+    <Component />
+  </div>
+);
 
 function App() {
   return (
     <Router>
+      {/* Navbar na górze strony */}
       <Navbar />
       <Switch>
-        <Route path='/' exact component={HomeWithMargin} />
-        <Route path='/Projects' component={ProjectsWithMargin} />
-        <Route path='/Documents' component={DocumentsWithMargin} />
-        <Route path='/Netapi' component={NetapiWithMargin} />
-        <Route path='/Fronttech' component={FronttechWithMargin} />
+        {/* Strona główna */}
+        <Route path='/' exact component={() => <PageWithMargin component={Home} />} />
+        {/* Projekty */}
+        <Route path='/Projects' component={() => <PageWithMargin component={Projects} />} />
+        {/* Dokumenty */}
+        <Route path='/Documents' component={() => <PageWithMargin component={Documents} />} />
+        {/* Netapi */}
+        <Route path='/Netapi' component={() => <PageWithMargin component={Netapi} />} />
+        {/* Fronttech */}
+        <Route path='/Fronttech' component={() => <PageWithMargin component={Fronttech} />} />
       </Switch>
+      {/* Sekcja kontaktu */}
       <div className="contact">
         <Contact />
       </div>
-      <>
-        <div className="backwrap gradient">
-          <div className="back-shapes">
+      {/* Animacje tła */}
+      <div className="backwrap gradient">
+        <div className="back-shapes">
             <span
               className="floating circle"
               style={{
@@ -291,7 +298,6 @@ function App() {
             ></span>
           </div>
         </div>
-      </>
     </Router>
   );
 }
