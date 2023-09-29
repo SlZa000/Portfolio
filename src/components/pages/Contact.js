@@ -6,6 +6,7 @@ export default function Contact() {
   return (
     <section id='contact' className='contact'>
       <h1 className='contact__title'>Kontakt</h1>
+      <p>Aders e-mail: slawomirzajc@gmail.com <br/> Tel : 575 180 010</p>
       <div className='contact-form'>
         <form className='contact-form__form'>
           <div className='form-group contact-form__form-group'>

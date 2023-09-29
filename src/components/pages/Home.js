@@ -12,6 +12,8 @@ import image3 from '../../images/img-3.jpg';
 import image4 from '../../images/img-4.jpg';
 import image5 from '../../images/img-5.jpg';
 import image6 from '../../images/img-6.jpg';
+import image7 from '../../images/dataimg.png';
+import image8 from '../../images/netsec.png';
 
 export default function Home() {
   const [isExpanded1, setIsExpanded1] = useState(false);
@@ -65,7 +67,9 @@ export default function Home() {
 
   const imagesProject2 = [image1, image2, image3];
   const imagesProject3 = [image4, image5, image6];
+  const imagesProject4 = [image7, image8];
 
+  
   return (
     <div>
       <div className='home'>
@@ -130,23 +134,23 @@ export default function Home() {
       </div>
 
       <div className='article'>
-        <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
-        <Slider images={imagesProject3} />
-        <p>Opis widoczny</p>
+        <h1>Certyfikaty</h1>
+        <Slider images={imagesProject4} />
+        <p>Certyfikaty zdobyte podczas studiów.</p>
         <div ref={contentRef3} className={`description ${isExpanded3 ? 'expanded' : ''}`}>
-          {isExpanded3 && <p>Opis rozwinięty</p>}
+          {isExpanded3 && <p>Certyfikat 98-364: MTA Database Fundamentals i Certiport Network Security. Te certyfikaty potwierdzają moje umiejętności w zakresie baz danych i bezpieczeństwa sieciowego. Moje wykształcenie i doświadczenie są kluczowe dla mojej kariery jako programisty. Planuję kontynuować naukę i rozwijać swoje umiejętności, aby sprostać wyzwaniom przyszłości w dziedzinie technologii.</p>}
         </div>
         <button className='toggle-button' onClick={handleToggle3}>
           Rozwiń/Zwiń opis
         </button>
-        <Link to='/Netapi'>
-          <button className='see-more-button'>Przejdź do Netapi</button>
+        <Link to='/Documents'>
+          <button className='see-more-button'>Certyfikaty</button>
         </Link>
       </div>
 
       <div className='article'>
         <h1>Projekt .NET API & MSSql Database Notes.Api</h1>
-        <Slider images={imagesProject2} />
+        <Slider images={imagesProject3} />
         <p>Opis widoczny</p>
         <div ref={contentRef4} className={`description ${isExpanded4 ? 'expanded' : ''}`}>
           {isExpanded4 && <p>Opis rozwinięty</p>}
