@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/ReactPortfolio2023/static/css/main.05c86445.css",
-    "main.js": "/ReactPortfolio2023/static/js/main.5396c735.js",
+    "main.css": "/ReactPortfolio2023/static/css/main.308cd9dd.css",
+    "main.js": "/ReactPortfolio2023/static/js/main.c3842b35.js",
     "static/media/profilowe.png": "/ReactPortfolio2023/static/media/profilowe.cfc73b003b1a1b7ac551.png",
     "static/media/222.png": "/ReactPortfolio2023/static/media/222.caf5ec80b2347816f2af.png",
     "static/media/p222.png": "/ReactPortfolio2023/static/media/p222.9d6d5f2d7387292eb092.png",
+    "static/media/s222.png": "/ReactPortfolio2023/static/media/s222.909b1cb7280b7f9ee003.png",
     "static/media/img1.png": "/ReactPortfolio2023/static/media/img1.49ce5a2757ba5b45b5ac.png",
     "static/media/111.png": "/ReactPortfolio2023/static/media/111.8c85290d60a01497c5b6.png",
     "static/media/s111.png": "/ReactPortfolio2023/static/media/s111.015c4fe347f7b0d7413d.png",
@@ -13,6 +14,7 @@
     "static/media/netsec.png": "/ReactPortfolio2023/static/media/netsec.79f4bba5a0afda3c559f.png",
     "static/media/p111.png": "/ReactPortfolio2023/static/media/p111.db18988d43306df69a20.png",
     "static/media/N333.png": "/ReactPortfolio2023/static/media/N333.0684e1f5835e78b7e1a8.png",
+    "static/media/s333.png": "/ReactPortfolio2023/static/media/s333.cc37ed125ebacf0688ed.png",
     "static/media/N111.png": "/ReactPortfolio2023/static/media/N111.d3380f9c55318f532227.png",
     "static/media/slick.svg": "/ReactPortfolio2023/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/ReactPortfolio2023/static/media/slick.a4e97f5a2a64f0ab1323.eot",
@@ -20,11 +22,11 @@
     "static/media/slick.woff": "/ReactPortfolio2023/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/ReactPortfolio2023/index.html",
     "static/media/getFetch.cjs": "/ReactPortfolio2023/static/media/getFetch.c4cca45e22bc1b2c7d0d.cjs",
-    "main.05c86445.css.map": "/ReactPortfolio2023/static/css/main.05c86445.css.map",
-    "main.5396c735.js.map": "/ReactPortfolio2023/static/js/main.5396c735.js.map"
+    "main.308cd9dd.css.map": "/ReactPortfolio2023/static/css/main.308cd9dd.css.map",
+    "main.c3842b35.js.map": "/ReactPortfolio2023/static/js/main.c3842b35.js.map"
   },
   "entrypoints": [
-    "static/css/main.05c86445.css",
-    "static/js/main.5396c735.js"
+    "static/css/main.308cd9dd.css",
+    "static/js/main.c3842b35.js"
   ]
 }
