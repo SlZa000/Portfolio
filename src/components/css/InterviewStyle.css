@@ -3,26 +3,31 @@
   display: flex;
   align-items: flex-start;
   padding: 1em;
-  background-color: #ffffff;
+  align-items: center;
+  /* background-color: #ffffff; */
   border-radius: 1em;
   position: relative;
-  justify-content: center; /* Wyśrodkowanie poziome */
+  /* border: 5px black solid; */
+  justify-content: center;
+  height: 18em;
+  margin-top: 4em;
 }
 
 .profile-image-container {
-  position: absolute;
-  top: -40%; /* Umożliwia wyjście obrazka poza górną krawędź */
-  left: 20%;
-  transform: translateX(-50%); /* Wyśrodkowanie poziome względem kontenera */
-  width: 18em;
-  height: 18em;
+  position: relative;
+  /* top: -10%; */
+  left: 3%;
+  /* transform: translateX(-50%); */
+  width: auto;
+  height: 20em;
   border-radius: 50%;
-  background-color: #ffffff;
+  border: 2em white solid;
+  background-color: #3a3a3a;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  z-index: 1; /* Ustawienie, aby obrazek był poniżej tekstu */
+  z-index: 1;
 }
 
 .profile-image {
@@ -34,12 +39,16 @@
 
 .interview-text-container {
   background-color: #ffffff;
-  padding: 1em;
+  padding: 3%;
   border-radius: 1em;
-  flex-grow: 1;
-  z-index: 2; /* Ustawienie wyższego indeksu z-index, aby tekst był na wierzchu */
-  margin-left: 25em; /* Przesunięcie tekstu, aby obrazek nie nachodził */
-  padding-left: 15px; /* Odstęp od lewej krawędzi zgodny z przyciskiem */
+  /* flex-grow: 1; */
+  /* z-index: 2; */
+  /* margin-right: 50em; */
+  /* margin: auto; */
+  /* width: 70%; */
+  /* position: absolute; */
+  top: 25%;
+  font-size: 1.5em;
 }
 
 .interview-text {
@@ -69,4 +78,27 @@
   background-color: #000;
   color: #fff;
   border-color: #1888ff;
+}
+
+@media screen and (max-width: 960px) {
+  .interview-container {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 1em;
+  }
+
+  .profile-image-container {
+    left: 0;
+    margin-bottom: 1em;
+    width: 20em;
+    height: auto;
+  }
+
+  .interview-text-container {
+    top: 0;
+    font-size: 1.2em;
+    width: 100%;
+    margin-top: 1em;
+  }
 }

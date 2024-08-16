@@ -82,7 +82,7 @@ export default function Home() {
 
   const imagesProject1 = [image9, image10, image11];
   const imagesProject2 = [image1, image2, image3];
-  const imagesProject3 = [image4, image5, image6];
+  const imagesProject3 = [image6, image5, image4];
   const imagesProject4 = [image7, image8];
 
   return (

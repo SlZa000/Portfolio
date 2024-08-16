@@ -1,64 +1,7 @@
-/* PhotoSlider.css */
+/* Ogólne stylizacje */
 .slider-box {
   width: 84%;
   margin: auto;
-}
-
-.slider {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
-
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-  position: relative;
-  width: 100%;
-}
-
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-}
-
-.slick-next {
-  right: auto;
-  left: -47px;
-}
-
-.slick-prev {
-  left: auto;
-  right: -47px;
-}
-
-.slick-next,
-.slick-prev {
-  background-color: black !important;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-  transform: rotate(180deg);
-  width: 40px;
-  height: 40px;
-}
-
-.slick-next:before,
-.slick-prev:before {
-  font-size: 45px !important;
-  opacity: 0.90;
-}
-
-.slick-dots {
-  transform: rotate(180deg);
-}
-
-@media screen and (max-width: 960px) {
-  .slick-next,
-  .slick-prev {
-    display: none !important;
-  }
 }
 
 .slick-slide > div {
@@ -69,31 +12,66 @@
 
 .slider-image {
   max-width: 100%;
-  max-height: 500px; /* Maksymalna wysokość 300px */
-  object-fit: contain; /* Zachowaj proporcje */
+  max-height: 500px;
+  object-fit: contain;
   display: block;
-  margin: auto; /* Wyśrodkowanie w poziomie */
+  margin: auto;
 }
 
-/* Nowe reguły do wyśrodkowania obrazów pionowo */
-.slick-slide > div {
-  height: 500px; /* Ustaw wysokość kontenera */
+/* Stylizacje strzałek */
+.custom-arrow {
   display: flex;
   justify-content: center;
-  align-items: center; /* Wyśrodkowanie w pionie */
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
-.dots {
-  position: absolute;
-  bottom: 25px;
+
+.arrow-icon {
+  font-size: 24px;
+  color: white;
+  transition: transform 0.3s ease;
 }
 
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0.5em;
+.custom-arrow:hover .arrow-icon {
+  transform: scale(1.1);
 }
 
-.active-dot {
-  background-color: #717171;
+/* Pozycjonowanie strzałek */
+.next-arrow {
+  right: -15%;
+  left: auto;
+  background-color: rgb(48, 48, 48) !important;
+}
+
+.prev-arrow {
+  left: -15%;
+  right: auto;
+  background-color: rgb(48, 48, 48) !important;
+}
+
+
+
+/* Stylizacje kropek nawigacyjnych */
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.75;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff;
+  opacity: 1;
+}
+
+/* Responsywność */
+@media screen and (max-width: 960px) {
+  .custom-arrow {
+    display: none !important;
+  }
 }

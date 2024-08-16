@@ -15,6 +15,7 @@ export default function Interview({ profileImage, scrollToAboutMe }) {
       <div className="interview-text-container">
         <p className="interview-text">
           Jestem świeżo po zakończeniu praktyk na studiach i poszukuję stałej pracy jako Frontend Developer.
+          <br/>
           <button 
             onClick={scrollToAboutMe} 
             className="interview-button"

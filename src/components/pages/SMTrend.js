@@ -1,5 +1,9 @@
 import React from 'react';
 import '../css/SMTrendStyle.css';
+import img1 from '../../images/s111.png';
+import img2 from '../../images/s222.png';
+import img3 from '../../images/222.png';
+import img4 from '../../images/s333.png';
 
 export default function SMTrend() {
   return (
@@ -7,62 +11,72 @@ export default function SMTrend() {
       <div className='SMTrend'>
         <div className='SMTrendSection'>
           <h1 className='SMTrendSection-title'>
-            <span>Opis Aplikacji</span>
+            <span>SM Trend</span>
           </h1>
           <p className='SMTrendSection-description'>
             <span>
-              SM Trend to aplikacja, która wspiera użytkowników w tworzeniu treści internetowych, oferując zaawansowane filtry, które pozwalają na szybkie i łatwe znalezienie najpopularniejszych treści w różnych kategoriach. Dzięki tej aplikacji, proces tworzenia treści staje się bardziej efektywny i przynosi lepsze rezultaty.
+              SM Trend to nowoczesna aplikacja zaprojektowana, aby wspierać użytkowników w tworzeniu treści online. Oferuje zaawansowane filtry, które umożliwiają szybkie i łatwe odnajdywanie najpopularniejszych treści w różnych kategoriach. Dzięki temu proces tworzenia treści staje się bardziej efektywny i ukierunkowany na wyniki.
             </span>
           </p>
-        </div>
-
-        <div className='SMTrendSection'>
-          <h2 className='SMTrendSection-title'>
-            <span>System Logowania i Rejestracji</span>
-          </h2>
-          <p className='SMTrendSection-description'>
-            <span>
-              Użytkownicy mogą z łatwością zarejestrować się lub zalogować do aplikacji, co umożliwia dostęp do pełnego zakresu funkcji. Proces uwierzytelniania jest zabezpieczony przy użyciu tokenów JWT, co gwarantuje bezpieczeństwo danych.
-            </span>
-          </p>
-          <div className='SMTrendSection-code'>
-            <pre>
-              <code>
-{`// Przykładowy kod implementacji uwierzytelniania JWT
-const authenticateUser = async (username, password) => {
-  try {
-    const response = await fetch('/api/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ username, password }),
-    });
-    const data = await response.json();
-    if (data.token) {
-      localStorage.setItem('token', data.token);
-      // Użytkownik zalogowany
-    } else {
-      // Obsługa błędów logowania
-    }
-  } catch (error) {
-    console.error('Błąd podczas logowania:', error);
-  }
-};`}
-              </code>
-            </pre>
+          <div className='SMTrendSection-image'>
+            <img src={img2} alt='Zrzut ekranu głównego interfejsu SM Trend.' />
           </div>
         </div>
 
         <div className='SMTrendSection'>
           <h2 className='SMTrendSection-title'>
-            <span>Postowanie Wpisów</span>
+            <span>System Autoryzacji Użytkowników</span>
           </h2>
           <p className='SMTrendSection-description'>
             <span>
-              SM Trend umożliwia tworzenie różnorodnych wpisów, takich jak dźwięki, obrazy, filmy, słowa kluczowe itp. Użytkownicy mogą dzielić się swoimi pomysłami i treściami z innymi, co sprzyja budowaniu społeczności i zwiększa zasięg ich twórczości.
+              Użytkownicy mogą łatwo zarejestrować się lub zalogować do aplikacji, uzyskując dostęp do pełnej gamy funkcji. Proces uwierzytelniania jest zabezpieczony przy użyciu tokenów JWT, co zapewnia bezpieczeństwo danych i prywatność.
             </span>
           </p>
+          <div className='SMTrendSection-code'>
+            <pre>
+              <code>
+{`// Fragment implementacji uwierzytelniania JWT
+public interface IJwtUtils
+{
+    string GenerateToken(User user);
+}
+
+public class JwtUtils : IJwtUtils
+{
+    public string GenerateToken(User user)
+    {
+        var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
+        var tokenDescriptor = new SecurityTokenDescriptor
+        {
+            Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id.ToString()) }),
+            Expires = DateTime.UtcNow.AddHours(1),
+            SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+        };
+
+        var token = tokenHandler.CreateToken(tokenDescriptor);
+        return tokenHandler.WriteToken(token);
+    }
+}`}
+              </code>
+            </pre>
+          </div>
+          <div className='SMTrendSection-image'>
+          <img src={img1} alt='Zrzut ekranu głównego interfejsu SM Trend.' />
+          </div>
+        </div>
+
+        <div className='SMTrendSection'>
+          <h2 className='SMTrendSection-title'>
+            <span>Tworzenie Treści</span>
+          </h2>
+          <p className='SMTrendSection-description'>
+            <span>
+              SM Trend umożliwia tworzenie różnego rodzaju postów, takich jak audio, zdjęcia, filmy i słowa kluczowe. Użytkownicy mogą dzielić się swoimi pomysłami i treściami z innymi, wspierając tym samym budowanie społeczności oraz zwiększając zasięg swojej kreatywności.
+            </span>
+          </p>
+          <div className='SMTrendSection-image'>
+          <img src={img4} alt='Zrzut ekranu widoku filtrowania treści w SM Trend.' />
+          </div>
         </div>
 
         <div className='SMTrendSection'>
@@ -71,18 +85,18 @@ const authenticateUser = async (username, password) => {
           </h2>
           <p className='SMTrendSection-description'>
             <span>
-              Aplikacja oferuje zaawansowane filtry, które pozwalają użytkownikom szybko odfiltrować treści według popularności, kategorii, lub innych kryteriów. Dzięki temu osoby tworzące materiały mogą znaleźć interesujące ich treści do swojej pracy.
+              Aplikacja oferuje zaawansowane filtry, które pozwalają użytkownikom szybko filtrować treści według popularności, kategorii lub innych kryteriów. Ta funkcja pomaga twórcom treści znaleźć najbardziej odpowiednie materiały do swojej pracy.
             </span>
           </p>
         </div>
 
         <div className='SMTrendSection'>
           <h2 className='SMTrendSection-title'>
-            <span>Ujednolicenie Procesu Tworzenia Treści</span>
+            <span>Usprawnianie Procesu Tworzenia Treści</span>
           </h2>
           <p className='SMTrendSection-description'>
             <span>
-              SM Trend skupia się na ułatwieniu procesu komplementowania treści, ale także na ich targetowaniu, co ma na celu nie tylko przyspieszenie procesu tworzenia, ale również zwiększenie jakości tworzonych materiałów.
+              SM Trend koncentruje się na uproszczeniu procesu kuratorowania treści, jednocześnie skutecznie je ukierunkowując. To nie tylko przyspiesza tworzenie treści, ale także podnosi jakość tworzonych materiałów.
             </span>
           </p>
         </div>
@@ -92,8 +106,8 @@ const authenticateUser = async (username, password) => {
             <span>Galeria Zdjęć</span>
           </h2>
           <div className='SMTrendSection-image'>
-            <img src='path_to_image_1.jpg' alt='Zrzut ekranu aplikacji SM Trend, pokazujący główny interfejs użytkownika.' />
-            <img src='path_to_image_2.jpg' alt='Widok filtra treści w aplikacji SM Trend.' />
+            <img src={img4} alt='Zrzut ekranu widoku filtrowania treści w SM Trend.' />
+            <img src={img3} alt='Zrzut ekranu galerii zdjęć w SM Trend.' />
           </div>
         </div>
       </div>
