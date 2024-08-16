@@ -8,6 +8,8 @@ import Contact from './components/pages/Contact';
 import Netapi from './components/pages/netapi';
 import Fronttech from './components/pages/fronttech';
 import Documents from './components/pages/Documents';
+import SMTrend from './components/pages/SMTrend';
+import './i18n';
 
 // Komponent z marginesem dla stron
 const PageWithMargin = ({ component: Component }) => (
@@ -32,6 +34,8 @@ function App() {
         <Route path='/Netapi' component={() => <PageWithMargin component={Netapi} />} />
         {/* Fronttech */}
         <Route path='/Fronttech' component={() => <PageWithMargin component={Fronttech} />} />
+        {/* SMTrend */}
+        <Route path='/SMTrend' component={() => <PageWithMargin component={SMTrend} />} />
       </Switch>
       {/* Sekcja kontaktu */}
       <div className="contact">

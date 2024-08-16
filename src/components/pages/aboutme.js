@@ -7,10 +7,31 @@ export default function AboutMe() {
     <section id='aboutme' className='aboutme'>
       <h1 className='aboutme__title'>O mnie</h1>
       <p className='aboutme__description'>
-        <span>PL</span>
-        Mam dwadzieścia trzy lata, jestem studentem na Wyższej Szkole Ekonomii i Informatki w Krakowie. Rozwijam się w technologiach front-end Javascript React scss oraz back-end C# .NET i SQL. Brałem udział w rozwijaniu stron e-commerce. Tutaj można znaleść wiele moich projektów takich jak .Net Api z Bazą danych SQL czy cały czas rozwijające się portfolio React.
-        <span>ANG</span>
-        I am twenty-three years old, I am a student at the University of Economics and Information Technology in Krakow. I develop in front-end technologies Javascript React scss and back-end C# .NET and SQL. I participated in the development of e-commerce websites. Here you can find many of my projects such as .Net Api with SQL Database or the constantly developing React portfolio.
+        <h2><strong>Sławomir Zając</strong></h2><br />
+        E-mail: <a href="mailto:slawomirzajc@gmail.com">slawomirzajc@gmail.com</a> | Telefon: 575 180 010 | Miejscowość: Pcim
+        <br /><br />
+        <strong>Cel zawodowy:</strong> Jestem świeżo po zakończeniu praktyk na studiach i poszukuję stałej pracy jako Frontend Developer. Mam niewielkie doświadczenie komercyjne, które głównie dotyczyło prac związanych z frontendem, ale moje projekty studenckie, takie jak SM Trend, doskonale pokazują moje zdolności programistyczne.
+        <br /><br />
+        <strong>Umiejętności techniczne:</strong> HTML, CSS (Bootstrap), JavaScript (React, TypeScript), SQL, .NET, C#, Git, GitHub, Znajomość SEO, CMS: WordPress, PrestaShop, Obsługa pakietu Adobe (grafika komputerowa).
+        <br /><br />
+        <strong>Doświadczenie zawodowe:</strong><br />
+        <em>Specjalista ds. Social Media</em>, Elektroplast, od stycznia 2024 – obecnie<br />
+        - Prowadzenie kampanii marketingowych na Facebooku.<br />
+        - Moderacja strony internetowej za pomocą PrestaShop, HTML, CSS.<br />
+        - Tworzenie banerów i grafik na potrzeby kampanii marketingowych.<br /><br />
+        <em>Sprzedawca</em>, Praca za granicą, 2021 – 2023<br />
+        - Praca magazynowo logistyczna za granicą oraz sprzedawca w Polsce.<br /><br />
+        <em>Informatyk</em>, ThebestPC Myślenice, 07.2021 – 10.2021<br />
+        - Naprawa komputerów, konfiguracja sieci i wsparcie techniczne.<br /><br />
+        <em>Programista</em>, Wellbud Myślenice, 10.2019 – 02.2020<br />
+        - Modyfikacja stron internetowych na WordPressie.<br />
+        - Tworzenie banerów, formularzy, wersji mobilnych.<br /><br />
+        <strong>Wykształcenie:</strong> Inżynier Informatyki Stosowanej, Wyższa Szkoła Ekonomii i Informatyki w Krakowie, od 10.2020 – obecnie (Studia zaoczne).
+        <br /><br />
+        <strong>Projekty:</strong> Projekt inżynierski: SM Trend - aplikacja webowa z autorskim API .NET, lokalną bazą danych, uwierzytelnianiem tokenem JWT, front-end w React i TypeScript.
+        <br /><br />
+        <strong>Linki:</strong> <a href="https://github.com/Mirac00?tab=repositories" target="_blank">GitHub</a> | <a href="https://www.linkedin.com/in/s%C5%82awomir-zajac-69ba94259/" target="_blank">LinkedIn</a>
+        <br /><br />
       </p>
     </section>
   );

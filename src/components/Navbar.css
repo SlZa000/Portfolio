@@ -54,7 +54,7 @@
 
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: repeat(6, auto);
   grid-gap: 10px;
   list-style: none;
   text-align: center;
@@ -93,6 +93,28 @@
 .menu-icon {
   display: none;
 }
+
+.language-toggle {
+  display: flex;
+  width: 100px;
+  border: 2px solid grey;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.language-toggle .toggle-option {
+  flex: 1;
+  text-align: center;
+  padding: 5px 0;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.language-toggle .toggle-option.active {
+  background-color: #1888ff;
+}
+
 
 @media screen and (max-width: 960px) {
   .nav-link-mobile {

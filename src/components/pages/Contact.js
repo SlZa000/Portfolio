@@ -1,14 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import '../../App.css';
 import '../css/ContactStyle.css';
 
-export default function Contact() {
+function ContactForm() {
+  const [state, handleSubmit] = useForm("mwpeqwpb");
+  const [feedbackMessage, setFeedbackMessage] = useState(null);
+  const [feedbackColor, setFeedbackColor] = useState('');
+
+  useEffect(() => {
+    if (state.succeeded) {
+      setFeedbackMessage('Wiadomość wysłana');
+      setFeedbackColor('green');
+    } else if (state.errors && state.errors.length > 0) {
+      setFeedbackMessage('Wystąpił błąd');
+      setFeedbackColor('red');
+    }
+  }, [state]);
+
   return (
     <section id='contact' className='contact'>
       <h1 className='contact__title'>Kontakt</h1>
-      <p>Aders e-mail: slawomirzajc@gmail.com <br/> Tel : 575 180 010</p>
+      <p>Adres e-mail: slawomirzajc@gmail.com <br/> Tel : 575 180 010</p>
       <div className='contact-form'>
-        <form className='contact-form__form'>
+        <form onSubmit={handleSubmit} className='contact-form__form'>
           <div className='form-group contact-form__form-group'>
             <div className='form-group-half contact-form__half'>
               <label htmlFor='name' className='contact-form__label'>
@@ -33,6 +48,11 @@ export default function Contact() {
                 className='contact-form__input'
                 required
               />
+              <ValidationError 
+                prefix="Email" 
+                field="email"
+                errors={state.errors}
+              />
             </div>
           </div>
           <div className='form-group'>
@@ -46,8 +66,16 @@ export default function Contact() {
               className='contact-form__textarea'
               required
             ></textarea>
+            <ValidationError 
+              prefix="Message" 
+              field="message"
+              errors={state.errors}
+            />
           </div>
-          <button type='submit' className='contact-form__button'>
+          {feedbackMessage && (
+          <p style={{ color: feedbackColor, marginTop: '20px' }}>{feedbackMessage}</p>
+        )}
+          <button type='submit' className='contact-form__button' disabled={state.submitting}>
             Wyślij
           </button>
         </form>
@@ -55,3 +83,5 @@ export default function Contact() {
     </section>
   );
 }
+
+export default ContactForm;

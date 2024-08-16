@@ -1,0 +1,72 @@
+
+.interview-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 1em;
+  background-color: #ffffff;
+  border-radius: 1em;
+  position: relative;
+  justify-content: center; /* Wyśrodkowanie poziome */
+}
+
+.profile-image-container {
+  position: absolute;
+  top: -40%; /* Umożliwia wyjście obrazka poza górną krawędź */
+  left: 20%;
+  transform: translateX(-50%); /* Wyśrodkowanie poziome względem kontenera */
+  width: 18em;
+  height: 18em;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1; /* Ustawienie, aby obrazek był poniżej tekstu */
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.interview-text-container {
+  background-color: #ffffff;
+  padding: 1em;
+  border-radius: 1em;
+  flex-grow: 1;
+  z-index: 2; /* Ustawienie wyższego indeksu z-index, aby tekst był na wierzchu */
+  margin-left: 25em; /* Przesunięcie tekstu, aby obrazek nie nachodził */
+  padding-left: 15px; /* Odstęp od lewej krawędzi zgodny z przyciskiem */
+}
+
+.interview-text {
+  margin: 0;
+  font-size: 1em;
+}
+
+.interview-button {
+  margin-left: 15px; /* Taki sam margines jak przy tekstowej sekcji */
+  padding: .5em;
+  cursor: pointer;
+  background-color: #1888ff;
+  color: #fff;
+  border: solid transparent;
+  border-width: .3em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: .4s;
+  transition-property: border, background-color;
+  border-radius: .5em;
+  margin-top: 1em;
+}
+
+.interview-button:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #1888ff;
+}

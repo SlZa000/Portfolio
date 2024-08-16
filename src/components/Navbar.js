@@ -106,7 +106,7 @@ function Navbar() {
           {window.innerWidth < 960 && (dropdown || (click && mobileDropdown)) && <Dropdown closeMobileMenu={closeMobileMenu} />}
           <li className='nav-item'>
             <Link to='/Documents' className={`nav-link ${click ? 'nav-link-mobile' : ''}`} onClick={() => { closeMobileMenu(); scrollToTop(); }}>
-              Documents
+              Certyfikaty
             </Link>
           </li>
           <li className='nav-item'>

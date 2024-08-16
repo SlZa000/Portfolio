@@ -9,4 +9,9 @@ export const MenuItems = [
     path: '/Fronttech',
     cName: 'dropdown-link'
   },
+  {
+    title: 'Fullstack React TS api .net DB MySql',
+    path: '/SMTrend',
+    cName: 'dropdown-link'
+  },
 ];

@@ -22,7 +22,8 @@ h1{
 .Fronttech,
 .Documents,
 .aboutme,
-.contact {
+.contact,
+.SMTrend {
   position: relative; /* Add this to position content elements */
   z-index: 2; /* Add this to give content a higher z-index */
 }
