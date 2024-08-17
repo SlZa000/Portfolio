@@ -131,8 +131,22 @@
     margin-left: 0;
     margin-top: 20px;
   }
+  .ArticleSection-description span{
+    width: 100%;
+    margin: 0%;
+  }
 
+  .ArticleSection-description-width span{
+    width: 100%;
+    margin: 0%;
+  }
+
+  .Projects{
+    max-width: 100%;
+    margin:0%;
+  }
   .ArticleSection-image {
     max-width: 100%;
+    margin: 2% 0 2% 0;
   }
 }
