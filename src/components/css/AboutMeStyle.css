@@ -95,4 +95,8 @@
   .aboutme__links p {
     font-size: 1em;
   }
+  .AboutMeShort h2 {
+    font-size: 2em;
+    margin: 0%;
+  }
 }
