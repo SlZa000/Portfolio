@@ -13,6 +13,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "devicon": "^2.15.1",
+    "google-translate-api-browser": "^5.0.0",
     "i18next": "^23.12.3",
     "i18next-http-backend": "^2.5.2",
     "react": "^16.13.1",
