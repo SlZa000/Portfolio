@@ -1,3 +1,8 @@
+.Interview{
+  height: auto;
+  width: 80%;
+  margin: auto;
+}
 .interview-container {
   display: flex;
   align-items: center;
@@ -22,6 +27,7 @@
   justify-content: center;
   overflow: hidden;
   z-index: 1;
+  margin: 1em;
 }
 
 .profile-image {
