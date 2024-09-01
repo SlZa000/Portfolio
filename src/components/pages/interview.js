@@ -15,7 +15,7 @@ export default function Interview({ profileImage, scrollToAboutMe }) {
       <div className="interview-text-container">
         <p className="interview-text">
           <h1>Sławomir Zając</h1><h2>Fullstack Developer</h2><br/>
-          Cześć! Nazywam się [Twoje Imię]. Jestem na ostatnim roku Informatyki Stosowanej i niedawno ukończyłem praktyki, podczas których zdobyłem cenne doświadczenie w pracy nad rzeczywistymi projektami. Pasjonuje mnie tworzenie innowacyjnych rozwiązań, które mogą realnie wpływać na świat.
+          Cześć! Nazywam się Sławomir Zając. Jestem na ostatnim roku Informatyki Stosowanej i niedawno ukończyłem praktyki, podczas których zdobyłem cenne doświadczenie w pracy nad rzeczywistymi projektami. Pasjonuje mnie tworzenie innowacyjnych rozwiązań, które mogą realnie wpływać na świat.
 
 Na mojej stronie znajdziesz nie tylko moje CV, ale także szczegółowe opisy projektów, nad którymi pracowałem. Każdy z nich pokazuje moje podejście do programowania, kreatywność oraz umiejętność rozwiązywania problemów. Zachęcam Cię do zapoznania się z moim portfolio i odkrycia, jak mogę pomóc w Twoich projektach.
 
