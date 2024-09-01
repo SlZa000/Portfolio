@@ -25,7 +25,7 @@ h1{
 .contact,
 .SMTrend {
   position: relative; /* Add this to position content elements */
-  z-index: 2; /* Add this to give content a higher z-index */
+  z-index: 1; /* Add this to give content a higher z-index */
 }
 
 .backwrap {
@@ -39,7 +39,7 @@ h1{
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* Shapes & Animation
