@@ -43,8 +43,8 @@
   margin: 0;
   font-size: 1rem;
   color: white;
+  font-family: system-ui;
 }
-
 .interview-button {
   margin-left: 15px; /* Taki sam margines jak przy tekstowej sekcji */
   padding: .5em;
