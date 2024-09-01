@@ -20,9 +20,9 @@ function ContactForm() {
 
   return (
     <section id='contact' className='contact'>
+      <div className='contact-form'>
       <h1 className='contact__title'>Kontakt</h1>
       <p>Adres e-mail: slawomirzajc@gmail.com <br/> Tel : 575 180 010</p>
-      <div className='contact-form'>
         <form onSubmit={handleSubmit} className='contact-form__form'>
           <div className='form-group contact-form__form-group'>
             <div className='form-group-half contact-form__half'>
