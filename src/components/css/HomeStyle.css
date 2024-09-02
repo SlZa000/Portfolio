@@ -101,4 +101,13 @@
 
 @keyframes fadeIn {from{opacity:0}to{opacity:1}}
 
-@media screen and (max-width:960px) {.article{flex-basis:auto;width:90%;margin-top:.5em;margin-bottom:.5em;margin-left:auto;margin-right:auto}.article .see-more-button{position:relative;margin-top:.5em}}
+@media screen and (max-width:960px) {.article{flex-basis:auto;width:90%;margin-top:.5em;margin-bottom:.5em;margin-left:auto;margin-right:auto}
+.article .see-more-button{
+  position:relative;
+  margin-top:.5em
+}
+.AboutMeShort h2{
+  font-size: 1em;
+  margin-top: 0em;
+}
+}
