@@ -52,7 +52,7 @@
   font-family: system-ui;
 }
 .interview-button {
-  margin-left: 15px; /* Taki sam margines jak przy tekstowej sekcji */
+  margin-left: 15px; 
   padding: .5em;
   cursor: pointer;
   background-color: #1888ff;

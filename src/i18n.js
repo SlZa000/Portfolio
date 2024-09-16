@@ -6,25 +6,24 @@ i18n
   .use(HttpBackend)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'pl', // Domyślny język
-    lng: localStorage.getItem('language') || 'pl', // Język zapisany w localStorage
+    fallbackLng: 'pl', 
+    lng: localStorage.getItem('language') || 'pl', 
     backend: {
       loadPath: (languages, namespaces) => {
-        const textToTranslate = namespaces[0]; // Tekst do tłumaczenia
-        const targetLanguage = languages[0]; // Docelowy język tłumaczenia
+        const textToTranslate = namespaces[0]; 
+        const targetLanguage = languages[0]; 
         return `https://translate.googleapis.com/translate_a/single?client=gtx&sl=pl&tl=${targetLanguage}&dt=t&q=${encodeURIComponent(textToTranslate)}`;
       },
-      parse: (data) => data[0][0][0] // Odbiera tłumaczenie
+      parse: (data) => data[0][0][0] 
     },
     interpolation: {
       escapeValue: false,
     },
     react: {
-      useSuspense: false, // Wyłączenie suspense, aby uniknąć problemów z inicjalizacją
+      useSuspense: false, 
     },
   });
 
-// Nasłuchiwacz na zmiany w localStorage
 window.addEventListener('storage', (event) => {
   if (event.key === 'language') {
     const newLanguage = event.newValue || 'pl';

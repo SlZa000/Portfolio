@@ -1,7 +1,6 @@
-// Navbar.js
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import './Navbar.css';
+import './/css/Navbar.css';
 import Dropdown from './Dropdown';
 import { HashLink as Links } from 'react-router-hash-link';
 import { Link as ScrollLink } from 'react-scroll';

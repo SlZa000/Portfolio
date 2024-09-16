@@ -18,7 +18,7 @@ import image8 from '../../images/netsec.png';
 import image9 from '../../images/p111.png';
 import image10 from '../../images/p222.png';
 import image11 from '../../images/p333.png';
-import profileImage from '../../images/profilowe.png'; // Dodaj tutaj ścieżkę do swojego zdjęcia profilowego
+import profileImage from '../../images/profilowe.png'; 
 import { useTranslation } from 'react-i18next';
 import GitHubButton from '../GitHubButton';
 

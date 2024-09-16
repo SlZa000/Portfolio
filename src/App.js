@@ -11,7 +11,6 @@ import Documents from './components/pages/Documents';
 import SMTrend from './components/pages/SMTrend';
 import './i18n';
 
-// Komponent z marginesem dla stron
 const PageWithMargin = ({ component: Component }) => (
   <div style={{ marginTop: '100px' }}>
     <Component />
@@ -21,27 +20,18 @@ const PageWithMargin = ({ component: Component }) => (
 function App() {
   return (
     <Router>
-      {/* Navbar na górze strony */}
       <Navbar />
       <Switch>
-        {/* Strona główna */}
         <Route path='/' exact component={() => <PageWithMargin component={Home} />} />
-        {/* Projekty */}
         <Route path='/Projects' component={() => <PageWithMargin component={Projects} />} />
-        {/* Dokumenty */}
         <Route path='/Documents' component={() => <PageWithMargin component={Documents} />} />
-        {/* Netapi */}
         <Route path='/Netapi' component={() => <PageWithMargin component={Netapi} />} />
-        {/* Fronttech */}
         <Route path='/Fronttech' component={() => <PageWithMargin component={Fronttech} />} />
-        {/* SMTrend */}
         <Route path='/SMTrend' component={() => <PageWithMargin component={SMTrend} />} />
       </Switch>
-      {/* Sekcja kontaktu */}
       <div className="contact">
         <Contact />
       </div>
-      {/* Animacje tła */}
       <div className="backwrap gradient">
         <div className="back-shapes">
             <span

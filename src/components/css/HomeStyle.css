@@ -1,4 +1,4 @@
-/* HomeStyle.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital@0;1&family=Ysabeau+Office:wght@100&display=swap');
 
 .container {
@@ -56,13 +56,13 @@
 }
 
 .description {
-    max-height:0; /* Start with the content hidden */
-    overflow:hidden; /* Hide the content that spills out of the element */
-    transition:max-height .4s ease-in-out; /* Animate the max-height property */
+    max-height:0; 
+    overflow:hidden; 
+    transition:max-height .4s ease-in-out; 
 }
 
 .description.expanded {
-    max-height:100vh; /* When expanded, max-height is a large value */
+    max-height:100vh; 
 }
 
 .article .see-more-button,

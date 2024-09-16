@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './slider.css';
+import './/css/slider.css';
 
 class PhotoSlider extends Component {
   constructor(props) {

@@ -1,4 +1,4 @@
-/* Styl dla całego bloku .Netapi */
+
 .Netapi {
     position: relative;
     z-index: 2;
@@ -6,8 +6,7 @@
     margin-left: 5%;
     margin-right: 5%;
   }
-  
-  /* Styl dla nagłówka .Netapi-title i .Netapi-section-title span */
+ 
   .Netapi-title,
   .Netapi-section-title {
     background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
@@ -15,26 +14,26 @@
     color: rgb(255, 255, 255);
     border-radius: 10px;
     padding: 2%;
-    display: table; /* Zmieniamy display na "inline-block" */
+    display: table; 
   }
   .Netapi-section-titl{
     margin: 0.5em;
   }
   
-  /* Styl dla znaczników h2 */
+
   h2.Netapi-section-title {
     color: rgb(255, 255, 255);
     border-radius: 10px;
     margin: 0.5em 0;
     padding: 2%;
-    display: inline-block; /* Zmieniamy display na "inline-block" */
+    display: inline-block; 
   }
   
-  /* Styl dla tekstu .Netapi-text */
+ 
   .Netapi-text {
     font-size: 16px;
     color: rgb(255, 255, 255);
-    display: block; /* Zmieniamy display na "block" */
+    display: block; 
     background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
