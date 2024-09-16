@@ -67,7 +67,7 @@ public class JwtUtils : IJwtUtils
 
         <div className='SMTrendSection'>
           <h2 className='SMTrendSection-title'>
-            <span>Tworzenie Treści</span>
+            <span>Tworzenie Treścii</span>
           </h2>
           <p className='SMTrendSection-description'>
             <span>
